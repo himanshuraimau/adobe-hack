@@ -1,0 +1,735 @@
+{
+  "title": "Unit-1 Introduction to Biology",
+  "outline": [
+    {
+      "level": "H3",
+      "text": "Department of Biotechnology Biology for Engineers (S4CCA01)",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "Introduction",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "Features of a cell:",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "Siddaganga Institute of Technology, Tumakuru-572103",
+      "page": 1
+    },
+    {
+      "level": "H3",
+      "text": "Department of Biotechnology Biology for Engineers (S4CCA01)",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "Siddaganga Institute of Technology, Tumakuru-572103",
+      "page": 2
+    },
+    {
+      "level": "H3",
+      "text": "Department of Biotechnology Biology for Engineers (S4CCA01)",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "Prokaryotic and Eukaryotic cell",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "BEukaryotic cell",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "Prokaryotic cells",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "Figure: Structure of a prokaryotic cell-bacteria",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "Structure of Bacteria: (i)Plasma membrane-It is an ultra thin membrane 6-8 nm thick, chemically comprised of",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "(ii)Cell Wall-It is strong and rigid and covers plasma membrane to provide chemical protection",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "(iii)Capsule-In some bacteria, cell wall is surrounded by an additional slime or gel layer called",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "Siddaganga Institute of Technology, Tumakuru-572103",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "Department of Biotechnology Biology for Engineers (S4CCA01)",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "(iv)CytoplasmIt is the ground substance surrounded by plasma membrane and is site of all",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "(v)Nucleoids-The nuclear membrane includes a single, circular and double stranded DNA",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "Eukaryotic Cell",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "Figure: Structure of a Eukaryotic cell",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "Siddaganga Institute of Technology, Tumakuru-572103",
+      "page": 4
+    },
+    {
+      "level": "H3",
+      "text": "Department of Biotechnology Biology for Engineers (S4CCA01)",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "Prokaryotes Eukaryotes Nucleus",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "Absent Present",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "Membrane-bound",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "Absent Present",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "Unicellular Mostly multicellular; some unicellular",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "Cell size",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "Smaller (0.1-5 Larger (10-100 μm) μm)",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "Complexity",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "Simpler More complex",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "DNA Form",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "Circular Linear",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "Examples",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "2.Plasma Membrane:Every kind of animal cell is bounded by a living, extremely thin and delicate",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "Figure: Plasma membrane structure",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "Siddaganga Institute of Technology, Tumakuru-572103",
+      "page": 5
+    },
+    {
+      "level": "H3",
+      "text": "Department of Biotechnology Biology for Engineers (S4CCA01)",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "3.Cytosol/ Cytoplasm:The plasma membrane is followed by the colloidal organic fluid called",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "4.Cytoskeleton",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "5.Cytoplasmic Organelles",
+      "page": 6
+    },
+    {
+      "level": "H2",
+      "text": "5.1 Endoplasmic Reticulum (ER):Within the cytoplasm of most animals cells in an extensive",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "Figure: Endoplasmic reticulum",
+      "page": 6
+    },
+    {
+      "level": "H2",
+      "text": "5.2 Golgi Apparatus:It is cup shaped organelle which is located near the nucleus in many",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "Siddaganga Institute of Technology, Tumakuru-572103",
+      "page": 6
+    },
+    {
+      "level": "H3",
+      "text": "Department of Biotechnology Biology for Engineers (S4CCA01)",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "Figure : Golgi apparatus",
+      "page": 7
+    },
+    {
+      "level": "H2",
+      "text": "5.5 Mitochondria:Mitochondria are oxygen consuming ribbon shaped cellular organelles of",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "Siddaganga Institute of Technology, Tumakuru-572103",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "Department of Biotechnology Biology for Engineers (S4CCA01)",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "Figure: structure of mitocondria",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "Functions:",
+      "page": 8
+    },
+    {
+      "level": "H2",
+      "text": "5.6 Ribosomes:They are dense, rounded, granular and smallest known electron microscopic",
+      "page": 8
+    },
+    {
+      "level": "H2",
+      "text": "5.7 Nucleus:The nucleus is a membrane-enclosed organelle found in eukaryotic cells. Eukaryotes",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "Siddaganga Institute of Technology, Tumakuru-572103",
+      "page": 8
+    },
+    {
+      "level": "H3",
+      "text": "Department of Biotechnology Biology for Engineers (S4CCA01)",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "Figure: Eukaryotic nucleus",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "Siddaganga Institute of Technology, Tumakuru-572103",
+      "page": 9
+    },
+    {
+      "level": "H3",
+      "text": "Department of Biotechnology Biology for Engineers (S4CCA01)",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "Difference between Animal and Plant cell",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "Carbohydrates",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "Classification of Carbohydrates:",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "Siddaganga Institute of Technology, Tumakuru-572103",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "Department of Biotechnology Biology for Engineers (S4CCA01)",
+      "page": 11
+    },
+    {
+      "level": "H3",
+      "text": "3.Disaccharides:A further classification of oligosaccharides, gives two units of different",
+      "page": 11
+    },
+    {
+      "level": "H3",
+      "text": "4.Trisaccharides:Carbohydrates that on hydrolysis give three molecules of",
+      "page": 11
+    },
+    {
+      "level": "H3",
+      "text": "5.Tetrasaccharides:As the name suggests, this carbohydrate on hydrolysis gives four",
+      "page": 11
+    },
+    {
+      "level": "H3",
+      "text": "6.Polysaccharides:The last and final category of carbohydrates. These give a very large",
+      "page": 11
+    },
+    {
+      "level": "H3",
+      "text": "Importance of Carbohydrates:",
+      "page": 11
+    },
+    {
+      "level": "H3",
+      "text": "Figure:Structure of carbohydrates",
+      "page": 11
+    },
+    {
+      "level": "H3",
+      "text": "Siddaganga Institute of Technology, Tumakuru-572103",
+      "page": 11
+    },
+    {
+      "level": "H3",
+      "text": "Department of Biotechnology Biology for Engineers (S4CCA01)",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "Nucleic acids",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "Deoxyribonucleic Acid (DNA):",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "Siddaganga Institute of Technology, Tumakuru-572103",
+      "page": 12
+    },
+    {
+      "level": "H3",
+      "text": "Department of Biotechnology Biology for Engineers (S4CCA01)",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "Structure of Nucleic acids:",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "Proteins:",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "Amino acids:",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "Siddaganga Institute of Technology, Tumakuru-572103",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "Department of Biotechnology Biology for Engineers (S4CCA01)",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "Essential Amino Acids:",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "Non-Essential Amino acids:",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "Properties of Amino Acids:",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "Structure of proteins:",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "Siddaganga Institute of Technology, Tumakuru-572103",
+      "page": 14
+    },
+    {
+      "level": "H3",
+      "text": "Department of Biotechnology Biology for Engineers (S4CCA01)",
+      "page": 15
+    },
+    {
+      "level": "H3",
+      "text": "Peptide linkage:",
+      "page": 15
+    },
+    {
+      "level": "H3",
+      "text": "Figure: The various conformations of proteins",
+      "page": 15
+    },
+    {
+      "level": "H3",
+      "text": "Enzymes",
+      "page": 15
+    },
+    {
+      "level": "H3",
+      "text": "Comparison of chemical catalyst and enzymes Catalyst",
+      "page": 15
+    },
+    {
+      "level": "H3",
+      "text": "Enzyme",
+      "page": 15
+    },
+    {
+      "level": "H3",
+      "text": "Function Catalysts are substances that",
+      "page": 15
+    },
+    {
+      "level": "H3",
+      "text": "Molecular weight Low molecular weight",
+      "page": 15
+    },
+    {
+      "level": "H3",
+      "text": "High molecular weight compounds. globular proteins",
+      "page": 15
+    },
+    {
+      "level": "H3",
+      "text": "Siddaganga Institute of Technology, Tumakuru-572103",
+      "page": 15
+    },
+    {
+      "level": "H3",
+      "text": "Department of Biotechnology Biology for Engineers (S4CCA01)",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "Types There are two types of",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "Nature",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "Reaction type",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "Alternate terms",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "Reaction rates",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "Typically slower Several times faster",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "Specificity",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "They are not specific and",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "Active site of the enzyme",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "Mechanism of action of Enzymes",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "[E]+[S] [ES] [E]+[P]",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "Enzyme substrate Enzyme-substrate complex Enzyme + Product",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "Siddaganga Institute of Technology, Tumakuru-572103",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "Department of Biotechnology Biology for Engineers (S4CCA01)",
+      "page": 17
+    },
+    {
+      "level": "H3",
+      "text": "Properties of Enzymes",
+      "page": 17
+    },
+    {
+      "level": "H3",
+      "text": "Nomenclature of the enzymes",
+      "page": 17
+    },
+    {
+      "level": "H3",
+      "text": "Classification of Enzymes",
+      "page": 17
+    },
+    {
+      "level": "H1",
+      "text": "1. Oxidoreductases",
+      "page": 17
+    },
+    {
+      "level": "H1",
+      "text": "2. Transferases",
+      "page": 17
+    },
+    {
+      "level": "H1",
+      "text": "3. Hydrolases",
+      "page": 17
+    },
+    {
+      "level": "H3",
+      "text": "Siddaganga Institute of Technology, Tumakuru-572103",
+      "page": 17
+    },
+    {
+      "level": "H3",
+      "text": "Department of Biotechnology Biology for Engineers (S4CCA01)",
+      "page": 18
+    },
+    {
+      "level": "H1",
+      "text": "4. Lyases",
+      "page": 18
+    },
+    {
+      "level": "H1",
+      "text": "5. Isomerases",
+      "page": 18
+    },
+    {
+      "level": "H1",
+      "text": "6. Ligases",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "Vitamins:",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "Classification of vitamins:",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "Vitamins are classified into two categories:",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "Siddaganga Institute of Technology, Tumakuru-572103",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "Department of Biotechnology Biology for Engineers (S4CCA01)",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": "Name sources",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": "Deficiency diseases vitamins",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": "Vitamin B1 Yeast,",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": "Vitamin B2 egg white, milk, liver",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": "Cheilosis",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": "Vitamin B6 Yeast, milk, cereals and grams",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": "Vitamin B12 Meat, fish, egg and curd",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": "Pernicious",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": "Citrus fruits, amla scurvy",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": "Exposure to sunlight, fish Rickets",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": "Green leafy vegetables Increased blood clotting time",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": "Siddaganga Institute of Technology, Tumakuru-572103",
+      "page": 19
+    },
+    {
+      "level": "H3",
+      "text": "Department of Biotechnology Biology for Engineers (S4CCA01)",
+      "page": 20
+    },
+    {
+      "level": "H3",
+      "text": "Hormones:",
+      "page": 20
+    },
+    {
+      "level": "H3",
+      "text": "Figure:the site of origin of hormones",
+      "page": 20
+    },
+    {
+      "level": "H3",
+      "text": "Siddaganga Institute of Technology, Tumakuru-572103",
+      "page": 20
+    },
+    {
+      "level": "H3",
+      "text": "Department of Biotechnology Biology for Engineers (S4CCA01)",
+      "page": 21
+    },
+    {
+      "level": "H3",
+      "text": "Figure:The functions of the hormones",
+      "page": 21
+    },
+    {
+      "level": "H3",
+      "text": "Siddaganga Institute of Technology, Tumakuru-572103",
+      "page": 21
+    }
+  ]
+}
