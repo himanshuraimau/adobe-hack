@@ -2,9 +2,8 @@
 # Focus: High precision title and heading detection with proper hierarchy
 
 import re
-from collections import Counter, defaultdict
-from typing import List, Dict, Any, Optional, Tuple
-import math
+from collections import Counter
+from typing import List, Dict, Any
 
 class EnhancedDocumentAnalyzer:
     """

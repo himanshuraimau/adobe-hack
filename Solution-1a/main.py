@@ -1,5 +1,5 @@
 def main():
-    print("Hello from adobe-hack!")
+    print("Hello from solution-1a!")
 
 
 if __name__ == "__main__":

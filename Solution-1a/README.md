@@ -59,10 +59,10 @@ The solution uses a **multi-stage filtering and analysis approach**:
 - **typing**: Type hints for better code clarity
 
 ### Model
-- **MobileBERT**: Lightweight BERT model (≤200MB) for text quality validation
+- **MobileBERT**: Lightweight BERT model (≤100MB) for text quality validation
 - Used selectively for edge cases to maintain performance constraints
 - Runs entirely offline with local model files
-- Model size: ~95MB (well under 200MB constraint)
+- Model size: ~95MB
 
 ## Performance Optimizations
 
