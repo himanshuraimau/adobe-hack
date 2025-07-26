@@ -1,0 +1,250 @@
+{
+  "title": "Data Science for Business",
+  "outline": [
+    {
+      "level": "H1",
+      "text": "Praise",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "Discovery Journal",
+      "page": 3
+    },
+    {
+      "level": "H1",
+      "text": "Foster Provost and Tom Fawcett",
+      "page": 7
+    },
+    {
+      "level": "H3",
+      "text": "2013-07-25: First release",
+      "page": 8
+    },
+    {
+      "level": "H1",
+      "text": "Summary 108",
+      "page": 11
+    },
+    {
+      "level": "H1",
+      "text": "Preface",
+      "page": 17
+    },
+    {
+      "level": "H1",
+      "text": "Our Conceptual Approach to Data Science",
+      "page": 18
+    },
+    {
+      "level": "H3",
+      "text": "The concepts fit into three general types:",
+      "page": 18
+    },
+    {
+      "level": "H1",
+      "text": "Other Skills and Concepts",
+      "page": 20
+    },
+    {
+      "level": "H1",
+      "text": "Sections and Notation",
+      "page": 20
+    },
+    {
+      "level": "H3",
+      "text": "Italic",
+      "page": 21
+    },
+    {
+      "level": "H3",
+      "text": "Constant width",
+      "page": 21
+    },
+    {
+      "level": "H1",
+      "text": "Using Examples",
+      "page": 22
+    },
+    {
+      "level": "H1",
+      "text": "Safari® Books Online",
+      "page": 22
+    },
+    {
+      "level": "H1",
+      "text": "How to Contact Us",
+      "page": 23
+    },
+    {
+      "level": "H1",
+      "text": "Acknowledgments",
+      "page": 23
+    },
+    {
+      "level": "H1",
+      "text": "Introduction: Data-Analytic Thinking",
+      "page": 25
+    },
+    {
+      "level": "H1",
+      "text": "The Ubiquity of Data Opportunities",
+      "page": 25
+    },
+    {
+      "level": "H1",
+      "text": "Example: Hurricane Frances",
+      "page": 27
+    },
+    {
+      "level": "H1",
+      "text": "Example: Predicting Customer Churn",
+      "page": 28
+    },
+    {
+      "level": "H1",
+      "text": "Data Processing and “Big Data”",
+      "page": 31
+    },
+    {
+      "level": "H1",
+      "text": "From Big Data 1.0 to Big Data 2.0",
+      "page": 32
+    },
+    {
+      "level": "H1",
+      "text": "Data and Data Science Capability as a Strategic Asset",
+      "page": 33
+    },
+    {
+      "level": "H3",
+      "text": "Data-Analytic Thinking 13",
+      "page": 37
+    },
+    {
+      "level": "H1",
+      "text": "This Book",
+      "page": 38
+    },
+    {
+      "level": "H1",
+      "text": "Data Mining and Data Science, Revisited",
+      "page": 38
+    },
+    {
+      "level": "H3",
+      "text": "Fundamental concept:Formulating data mining solutions and evaluating the results",
+      "page": 39
+    },
+    {
+      "level": "H1",
+      "text": "Summary 17",
+      "page": 41
+    },
+    {
+      "level": "H1",
+      "text": "Business Problems and Data Science Solutions",
+      "page": 43
+    },
+    {
+      "level": "H3",
+      "text": "Fundamental concepts:A set of canonical data mining tasks; The data mining process;",
+      "page": 43
+    },
+    {
+      "level": "H1",
+      "text": "From Business Problems to Data Mining Tasks",
+      "page": 43
+    },
+    {
+      "level": "H1",
+      "text": "Supervised Versus Unsupervised Methods",
+      "page": 48
+    },
+    {
+      "level": "H2",
+      "text": "A note on the terms: Supervised and unsupervised learning",
+      "page": 48
+    },
+    {
+      "level": "H3",
+      "text": "“How much will this customer use the service?”",
+      "page": 49
+    },
+    {
+      "level": "H1",
+      "text": "Data Mining and Its Results",
+      "page": 49
+    },
+    {
+      "level": "H1",
+      "text": "Business Understanding",
+      "page": 51
+    },
+    {
+      "level": "H3",
+      "text": "The Data Mining Process 27",
+      "page": 51
+    },
+    {
+      "level": "H1",
+      "text": "Data Understanding",
+      "page": 52
+    },
+    {
+      "level": "H1",
+      "text": "Data Preparation",
+      "page": 53
+    },
+    {
+      "level": "H3",
+      "text": "The Data Mining Process 29",
+      "page": 53
+    },
+    {
+      "level": "H1",
+      "text": "Modeling",
+      "page": 55
+    },
+    {
+      "level": "H1",
+      "text": "Evaluation",
+      "page": 55
+    },
+    {
+      "level": "H3",
+      "text": "The Data Mining Process 31",
+      "page": 55
+    },
+    {
+      "level": "H1",
+      "text": "Deployment",
+      "page": 56
+    },
+    {
+      "level": "H3",
+      "text": "The Data Mining Process 33",
+      "page": 57
+    },
+    {
+      "level": "H1",
+      "text": "Implications for Managing the Data Science Team",
+      "page": 58
+    },
+    {
+      "level": "H2",
+      "text": "Software skills versus analytics skills",
+      "page": 59
+    },
+    {
+      "level": "H1",
+      "text": "Other Analytics Techniques and Technologies",
+      "page": 59
+    },
+    {
+      "level": "H1",
+      "text": "Statistics",
+      "page": 59
+    }
+  ]
+}
