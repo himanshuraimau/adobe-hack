@@ -1,0 +1,112 @@
+# Implementation Plan
+
+**Implementation Location**: All code will be implemented in the `problem1a` folder, utilizing the existing pyproject.toml setup and local MobileBERT model.
+
+- [x] 1. Set up project structure and core data models in problem1a
+  - Create Python modules within problem1a for components (pdf_parser, preprocessor, feature_extractor, classifier, structure_analyzer, json_builder)
+  - Define core data models in problem1a/models.py (TextBlock, ProcessedBlock, FeatureVector, ClassificationResult, Heading, DocumentStructure)
+  - Create base configuration management system in problem1a/config.py
+  - Update main.py as the entry point for the application
+  - _Requirements: 1.1, 1.2, 1.3_
+
+- [x] 2. Implement PDF parsing with PyMuPDF in problem1a
+  - Create problem1a/pdf_parser.py with PDFParser class that extracts text blocks with formatting information using PyMuPDF
+  - Implement text extraction with font size, font name, bounding box, and page number capture
+  - Add support for multilingual text extraction and encoding handling
+  - Write unit tests for PDF parsing functionality with provided sample PDFs in problem1a/input/
+  - _Requirements: 1.1, 1.3, 6.3_
+
+- [x] 3. Build text preprocessing pipeline in problem1a
+  - Create problem1a/preprocessor.py with TextPreprocessor class for cleaning and normalizing extracted text
+  - Create text normalization functions that preserve structural formatting information
+  - Add functionality to group related text blocks and maintain spatial relationships
+  - Write unit tests for text preprocessing with various formatting scenarios
+  - _Requirements: 1.2, 6.4_
+
+- [ ] 4. Develop feature extraction system in problem1a
+  - Create problem1a/feature_extractor.py with FeatureExtractor class that generates classification features from processed text blocks
+  - Implement font analysis (size ratios, weight, style indicators)
+  - Add position analysis (page location, alignment, whitespace patterns)
+  - Implement content analysis (text length, capitalization, punctuation patterns)
+  - Write unit tests for feature extraction with different text block types
+  - _Requirements: 2.2, 2.3, 6.1_
+
+- [x] 5. Adapt MobileBERT model for heading classification in problem1a
+  - Create problem1a/classifier.py with MobileBERTAdapter class that loads the local MobileBERT model from problem1a/models/local_mobilebert/
+  - Implement classification logic that combines textual content with extracted features
+  - Add support for predicting heading levels (title, H1, H2, H3, regular text) with confidence scores
+  - Create fallback rule-based classification for model failures
+  - Write unit tests for model loading and classification functionality
+  - _Requirements: 2.2, 2.3, 6.1, 6.2_
+
+- [x] 6. Build structure analysis and hierarchy detection in problem1a
+  - Create problem1a/structure_analyzer.py with StructureAnalyzer class that processes classification results
+  - Create hierarchy building logic that determines proper H1/H2/H3 relationships
+  - Add title detection using multiple heuristics (first heading, largest font, document metadata)
+  - Implement logic to handle missing hierarchy levels and inconsistent formatting
+  - Write unit tests for structure analysis with various document structures
+  - _Requirements: 2.1, 2.2, 2.3, 6.2_
+
+- [ ] 7. Create JSON output generation system in problem1a
+  - Create problem1a/json_builder.py with JSONBuilder class that formats document structure into required JSON format
+  - Add output validation to ensure JSON matches exact specification format
+  - Create error handling for edge cases (no title found, no headings detected)
+  - Implement file writing to output directory with proper error handling
+  - Write unit tests for JSON generation and validation
+  - _Requirements: 3.1, 3.2, 3.3, 3.4, 3.5_
+
+- [ ] 8. Integrate components into main processing pipeline in problem1a
+  - Update problem1a/main.py as the main application entry point that orchestrates all components
+  - Implement end-to-end processing pipeline from PDF input to JSON output
+  - Add command-line argument parsing for input/output directory specification
+  - Integrate error handling and timeout management for 10-second constraint
+  - Write integration tests for complete pipeline using provided sample PDFs in problem1a/input/
+  - _Requirements: 1.4, 5.1, 5.5_
+
+- [ ] 9. Optimize performance and resource usage in problem1a
+  - Profile application performance and identify bottlenecks in problem1a code
+  - Optimize model loading and inference for faster processing using the local MobileBERT model
+  - Implement memory-efficient text processing for large documents
+  - Add performance monitoring and logging for debugging
+  - Test processing time with 50-page documents to ensure 10-second limit
+  - _Requirements: 5.1, 5.2, 5.3, 5.4_
+
+- [ ] 10. Create Docker containerization for problem1a
+  - Write Dockerfile in problem1a directory with AMD64 platform specification and CPU-only requirements
+  - Configure container to include all dependencies from pyproject.toml and the MobileBERT model from problem1a/models/
+  - Set up proper volume mounting for problem1a/input and output directories
+  - Ensure container runs without internet access and within resource constraints
+  - Test Docker build and execution with provided sample commands
+  - _Requirements: 4.1, 4.2, 4.3, 4.4, 4.5, 4.6_
+
+- [ ] 11. Implement comprehensive error handling in problem1a
+  - Add robust error handling for PDF processing failures in problem1a modules
+  - Implement graceful degradation when model inference fails
+  - Create timeout handling that generates valid JSON output even on processing failures
+  - Add logging system for debugging and monitoring
+  - Write unit tests for all error scenarios and edge cases
+  - _Requirements: 1.4, 3.5, 5.5_
+
+- [ ] 12. Add multilingual support and accuracy improvements in problem1a
+  - Enhance text preprocessing in problem1a/preprocessor.py for better multilingual text handling
+  - Improve feature extraction in problem1a/feature_extractor.py to work effectively across different languages
+  - Fine-tune classification logic in problem1a/classifier.py for better accuracy with various document types
+  - Add support for different heading formatting conventions
+  - Test with multilingual documents and validate accuracy improvements using problem1a/input/ samples
+  - _Requirements: 1.3, 6.1, 6.3, 6.4_
+
+- [ ] 13. Create comprehensive test suite and validation in problem1a
+  - Write end-to-end tests in problem1a using both provided sample PDFs from problem1a/input/
+  - Create performance benchmarks and accuracy validation tests
+  - Add tests for Docker container execution and volume mounting
+  - Implement automated testing for multilingual document processing
+  - Create test data generation for edge cases and stress testing
+  - _Requirements: 6.1, 6.2, 6.3, 6.4_
+
+- [ ] 14. Final integration and deployment preparation in problem1a
+  - Integrate all components in problem1a and ensure seamless operation
+  - Validate final solution against all requirements and constraints
+  - Create comprehensive problem1a/README.md with usage instructions and approach explanation
+  - Perform final testing with Docker container in isolated environment
+  - Optimize final model size in problem1a/models/ to ensure it stays under 200MB limit
+  - _Requirements: 4.5, 5.2, 5.5_

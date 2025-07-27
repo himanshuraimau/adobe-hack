@@ -8,8 +8,23 @@
     },
     {
       "level": "H3",
+      "text": "“A must-read resource for anyone who is serious about embracing the opportunity of big data.”",
+      "page": 3
+    },
+    {
+      "level": "H3",
       "text": "Discovery Journal",
       "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "“I would love it if everyone I had to work with had read this book.”",
+      "page": 3
+    },
+    {
+      "level": "H3",
+      "text": "“A foundational piece in the fast developing world of Data Science. A must read for anyone interested in the Big Data revolution.\"",
+      "page": 4
     },
     {
       "level": "H1",
@@ -29,6 +44,16 @@
     {
       "level": "H1",
       "text": "Preface",
+      "page": 17
+    },
+    {
+      "level": "H3",
+      "text": "Data Science for Business is intended for several sorts of readers:",
+      "page": 17
+    },
+    {
+      "level": "H3",
+      "text": "• Developers who will be implementing data science solutions, and",
       "page": 17
     },
     {
@@ -53,6 +78,11 @@
     },
     {
       "level": "H3",
+      "text": "The following typographical conventions are used in this book:",
+      "page": 21
+    },
+    {
+      "level": "H3",
       "text": "Italic",
       "page": 21
     },
@@ -60,6 +90,11 @@
       "level": "H3",
       "text": "Constant width",
       "page": 21
+    },
+    {
+      "level": "H3",
+      "text": "This icon indicates a warning or caution.",
+      "page": 22
     },
     {
       "level": "H1",
@@ -77,9 +112,24 @@
       "page": 23
     },
     {
+      "level": "H3",
+      "text": "To comment or ask technical questions about this book, send email to bookques",
+      "page": 23
+    },
+    {
       "level": "H1",
       "text": "Acknowledgments",
       "page": 23
+    },
+    {
+      "level": "H3",
+      "text": "• Scipy, Numpy, Matplotlib, and Scikit-Learn • Weka",
+      "page": 24
+    },
+    {
+      "level": "H3",
+      "text": "• The Machine Learning Repository at the University of California at Irvine (Bache & Lichman, 2013)",
+      "page": 24
     },
     {
       "level": "H1",
@@ -94,6 +144,11 @@
     {
       "level": "H1",
       "text": "Example: Hurricane Frances",
+      "page": 27
+    },
+    {
+      "level": "H3",
+      "text": "Consider an example from a New York Times story from 2004:",
       "page": 27
     },
     {
@@ -118,18 +173,33 @@
     },
     {
       "level": "H3",
+      "text": "The prior sections suggest one of the fundamental principles of data science:data, and",
+      "page": 33
+    },
+    {
+      "level": "H3",
       "text": "Data-Analytic Thinking 13",
       "page": 37
     },
     {
       "level": "H1",
-      "text": "This Book",
+      "text": "Data Mining and Data Science, Revisited",
       "page": 38
     },
     {
-      "level": "H1",
-      "text": "Data Mining and Data Science, Revisited",
+      "level": "H3",
+      "text": "Fundamental concept:Extracting useful knowledge from data to solve business problems",
       "page": 38
+    },
+    {
+      "level": "H3",
+      "text": "Fundamental concept:From a large mass of data, information technology can be used to",
+      "page": 39
+    },
+    {
+      "level": "H3",
+      "text": "Fundamental concept:If you look too hard at a set of data, you will find something—but",
+      "page": 39
     },
     {
       "level": "H3",
@@ -152,6 +222,11 @@
       "page": 43
     },
     {
+      "level": "H3",
+      "text": "Supervised versus unsupervised data mining.",
+      "page": 43
+    },
+    {
       "level": "H1",
       "text": "From Business Problems to Data Mining Tasks",
       "page": 43
@@ -165,6 +240,21 @@
       "level": "H2",
       "text": "A note on the terms: Supervised and unsupervised learning",
       "page": 48
+    },
+    {
+      "level": "H3",
+      "text": "Technically, another condition must be met for supervised data mining: there must be",
+      "page": 48
+    },
+    {
+      "level": "H3",
+      "text": "“Will this customer purchase service S1 if given incentive I?”",
+      "page": 49
+    },
+    {
+      "level": "H3",
+      "text": "“Which service package (S1, S2, or none) will a customer likely purchase if given incen‐ tive I?”",
+      "page": 49
     },
     {
       "level": "H3",
