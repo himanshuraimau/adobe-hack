@@ -47,7 +47,7 @@
   - Write unit tests for structure analysis with various document structures
   - _Requirements: 2.1, 2.2, 2.3, 6.2_
 
-- [ ] 7. Create JSON output generation system in problem1a
+- [x] 7. Create JSON output generation system in problem1a
   - Create problem1a/json_builder.py with JSONBuilder class that formats document structure into required JSON format
   - Add output validation to ensure JSON matches exact specification format
   - Create error handling for edge cases (no title found, no headings detected)

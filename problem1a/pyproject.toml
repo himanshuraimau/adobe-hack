@@ -9,4 +9,5 @@ dependencies = [
     "pymupdf>=1.26.3",
     "torch>=2.7.1",
     "transformers>=4.54.0",
+    "pytest>=8.0.0",
 ]

@@ -1,0 +1,25 @@
+{
+  "title": "Sample Document for File Output",
+  "outline": [
+    {
+      "level": "H1",
+      "text": "Chapter 1",
+      "page": 1
+    },
+    {
+      "level": "H2",
+      "text": "Section 1.1",
+      "page": 1
+    },
+    {
+      "level": "H2",
+      "text": "Section 1.2",
+      "page": 3
+    },
+    {
+      "level": "H1",
+      "text": "Chapter 2",
+      "page": 5
+    }
+  ]
+}
