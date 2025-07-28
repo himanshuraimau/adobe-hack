@@ -1,0 +1,10 @@
+numpy
+pymupdf
+torch
+transformers
+pytest
+psutil
+pytest-cov
+black
+flake8
+mypy
