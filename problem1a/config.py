@@ -77,7 +77,11 @@ class Config:
         self.logging_config = {
             "level": "INFO",
             "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
-            "file": None  # Set to file path for file logging
+            "file": None,  # Set to file path for file logging
+            "max_file_size": 10 * 1024 * 1024,  # 10MB
+            "backup_count": 5,
+            "error_log_file": self.base_dir / "logs" / "errors.log",
+            "debug_log_file": self.base_dir / "logs" / "debug.log"
         }
     
     def get_pdf_config(self) -> Dict[str, Any]:

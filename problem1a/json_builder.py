@@ -9,8 +9,12 @@ import json
 import logging
 from pathlib import Path
 from typing import Dict, Any, Optional
-from .models import DocumentStructure, Heading
-from .config import config
+try:
+    from .models import DocumentStructure, Heading
+    from .config import config
+except ImportError:
+    from models import DocumentStructure, Heading
+    from config import config
 
 
 logger = logging.getLogger(__name__)

@@ -135,7 +135,6 @@ class HeadingClassifier:
                 confidence=confidence
             )
     
-    @safe_operation("model loading")
     def load_model(self, model_path: str) -> None:
         """
         Load the MobileBERT model from the specified path.
@@ -144,61 +143,13 @@ class HeadingClassifier:
             model_path: Path to the MobileBERT model directory
         """
         try:
-            # Validate model path
-            if not model_path:
-                raise ModelLoadingError(
-                    "Empty model path provided",
-                    error_code="EMPTY_MODEL_PATH"
-                )
-            
-            model_path_obj = Path(model_path)
-            if not model_path_obj.exists():
-                raise ModelLoadingError(
-                    f"Model directory does not exist: {model_path}",
-                    error_code="MODEL_PATH_NOT_FOUND",
-                    details={"model_path": model_path}
-                )
-            
-            # Check for required model files
-            required_files = ['config.json', 'tokenizer.json', 'tokenizer_config.json']
-            missing_files = []
-            for file_name in required_files:
-                if not (model_path_obj / file_name).exists():
-                    missing_files.append(file_name)
-            
-            if missing_files:
-                raise ModelLoadingError(
-                    f"Missing required model files: {missing_files}",
-                    error_code="MISSING_MODEL_FILES",
-                    details={"model_path": model_path, "missing_files": missing_files}
-                )
-            
-            # Load model with timeout and retry
-            def load_with_retry():
-                with timeout_manager.timeout_context(30, "model loading"):
-                    self.model_adapter.load_model(model_path)
-            
-            retry_manager.retry_with_backoff(load_with_retry)
+            self.model_adapter.load_model(model_path)
             self.model_loaded = True
             logger.info(f"Successfully loaded MobileBERT model from {model_path}")
-            
-        except (ModelLoadingError, TimeoutError):
-            # Re-raise our custom errors
-            self.model_loaded = False
-            raise
         except Exception as e:
-            # Handle unexpected errors
+            logger.error(f"Failed to load model from {model_path}: {e}")
             self.model_loaded = False
-            error_response = global_error_handler.handle_model_loading_error(e, model_path)
-            
-            if error_response.get('fallback_mode'):
-                logger.info("Model loading failed, will use rule-based classification")
-            else:
-                raise ModelLoadingError(
-                    f"Unexpected error loading model: {e}",
-                    error_code="UNEXPECTED_MODEL_ERROR",
-                    details={"model_path": model_path, "original_error": str(e)}
-                )
+            logger.info("Will use fallback rule-based classification")
     
     def predict_heading_level(self, block: ProcessedBlock) -> str:
         """
@@ -210,12 +161,8 @@ class HeadingClassifier:
         Returns:
             Predicted heading level ('title', 'h1', 'h2', 'h3', 'text')
         """
-        try:
-            result = self.classify_block(block.features, block.text)
-            return result.predicted_class
-        except Exception as e:
-            logger.error(f"Error predicting heading level: {e}")
-            return "text"  # Safe fallback
+        result = self.classify_block(block.features, block.text)
+        return result.predicted_class
 
 
 class MobileBERTAdapter:
@@ -229,7 +176,6 @@ class MobileBERTAdapter:
         self._tokenizer_cache = {}  # Cache tokenized inputs
         self._max_cache_size = 1000
     
-    @safe_operation("model loading")
     def load_model(self, model_path: str):
         """
         Load MobileBERT model and tokenizer with optimizations.
@@ -239,11 +185,7 @@ class MobileBERTAdapter:
         """
         model_path = Path(model_path)
         if not model_path.exists():
-            raise ModelLoadingError(
-                f"Model directory not found: {model_path}",
-                error_code="MODEL_DIR_NOT_FOUND",
-                details={"model_path": str(model_path)}
-            )
+            raise FileNotFoundError(f"Model directory not found: {model_path}")
         
         try:
             logger.info("Loading MobileBERT tokenizer...")
@@ -283,13 +225,9 @@ class MobileBERTAdapter:
             logger.info("MobileBERT model and tokenizer loaded successfully")
             
         except Exception as e:
-            raise ModelLoadingError(
-                f"Error loading model: {e}",
-                error_code="MODEL_LOADING_FAILED",
-                details={"model_path": str(model_path), "original_error": str(e)}
-            )
+            logger.error(f"Error loading model: {e}")
+            raise
     
-    @safe_operation("model prediction", fallback_value=("text", 0.1))
     def predict(self, text: str, features: FeatureVector) -> Tuple[str, float]:
         """
         Make prediction using the loaded model with caching optimization.
@@ -302,10 +240,7 @@ class MobileBERTAdapter:
             Tuple of (predicted_class, confidence_score)
         """
         if self.model is None or self.tokenizer is None:
-            raise ClassificationError(
-                "Model not loaded. Call load_model() first.",
-                error_code="MODEL_NOT_LOADED"
-            )
+            raise RuntimeError("Model not loaded. Call load_model() first.")
         
         try:
             # Prepare input text with feature information
@@ -351,13 +286,9 @@ class MobileBERTAdapter:
                     return predicted_class, confidence
                 
         except Exception as e:
-            raise ClassificationError(
-                f"Prediction failed: {e}",
-                error_code="PREDICTION_FAILED",
-                details={"text": text[:100], "original_error": str(e)}
-            )
+            logger.error(f"Prediction failed: {e}")
+            raise
     
-    @safe_operation("batch prediction", fallback_value=[])
     def predict_batch(self, texts_and_features: List[Tuple[str, FeatureVector]]) -> List[Tuple[str, float]]:
         """
         Make batch predictions for better performance.
@@ -369,10 +300,7 @@ class MobileBERTAdapter:
             List of (predicted_class, confidence_score) tuples
         """
         if self.model is None or self.tokenizer is None:
-            raise ClassificationError(
-                "Model not loaded. Call load_model() first.",
-                error_code="MODEL_NOT_LOADED"
-            )
+            raise RuntimeError("Model not loaded. Call load_model() first.")
         
         if not texts_and_features:
             return []
@@ -418,11 +346,8 @@ class MobileBERTAdapter:
                     return results
                     
         except Exception as e:
-            raise ClassificationError(
-                f"Batch prediction failed: {e}",
-                error_code="BATCH_PREDICTION_FAILED",
-                details={"batch_size": len(texts_and_features), "original_error": str(e)}
-            )
+            logger.error(f"Batch prediction failed: {e}")
+            raise
     
     def _enhance_text_with_features(self, text: str, features: FeatureVector) -> str:
         """
@@ -464,51 +389,19 @@ class FallbackRuleBasedClassifier:
     """Rule-based fallback classifier for when ML model fails."""
     
     def __init__(self):
-        # Enhanced multilingual title patterns
         self.title_patterns = [
-            r'^[A-Z\s\d]+$',  # All caps titles - only uppercase letters, spaces, and digits
-            r'^(TITLE|SUBJECT|TOPIC|TÍTULO|TITRE|TITEL|TITOLO|ЗАГОЛОВОК|标题|العنوان)[:]\s*',  # Multilingual title markers
-            r'^(Abstract|Resumen|Résumé|Zusammenfassung|Riassunto|Аннотация|摘要|الملخص)[:]\s*',  # Abstract markers
-            r'^(Introduction|Introducción|Introduction|Einleitung|Introduzione|Введение|介绍|مقدمة)[:]\s*',  # Introduction markers
-            r'^(Conclusion|Conclusión|Conclusion|Schlussfolgerung|Conclusione|Заключение|结论|خاتمة)[:]\s*',  # Conclusion markers
+            r'^[A-Z\s\d]+$'  # All caps titles - only uppercase letters, spaces, and digits$',  # All caps titles - only uppercase letters, spaces, and digits
+            r'^(TITLE|SUBJECT|TOPIC)[:]\s*',  # Explicit title markers
         ]
         
-        # Enhanced multilingual heading patterns
         self.heading_patterns = [
             r'^\d+\.\s+',  # Simple numbered headings (1. Introduction)
             r'^\d+\.\d+\s+',  # Two-level numbering (1.1 Overview)
             r'^\d+\.\d+\.\d+\s+',  # Three-level numbering (1.1.1 Details)
             r'^[A-Z][a-z]+\s+\d+',  # Chapter/Section patterns
-            r'^(Chapter|Section|Part|Capítulo|Chapitre|Kapitel|Capitolo|Глава|章节|فصل)\s+\d+',  # Multilingual chapter/section
-            r'^(Appendix|Apéndice|Annexe|Anhang|Appendice|Приложение|附录|ملحق)\s*[A-Z]?',  # Appendix patterns
-            r'^[IVX]+\.\s+',  # Roman numerals (I. II. III.)
-            r'^[A-Z]\.\s+',  # Letter headings (A. B. C.)
-            r'^[a-z]\)\s+',  # Lowercase letter with parenthesis (a) b) c))
-            r'^\([a-z]\)\s+',  # Parenthesized lowercase letters ((a) (b) (c))
-            r'^\([0-9]+\)\s+',  # Parenthesized numbers ((1) (2) (3))
+            r'^(Chapter|Section|Part)\s+\d+',  # Explicit chapter/section
         ]
-        
-        # Language-specific patterns for better accuracy
-        self.language_specific_patterns = {
-            'chinese': [
-                r'^第[一二三四五六七八九十\d]+章',  # Chinese chapter markers
-                r'^[一二三四五六七八九十]+、',  # Chinese numbered lists
-            ],
-            'arabic': [
-                r'^الفصل\s+\d+',  # Arabic chapter
-                r'^القسم\s+\d+',  # Arabic section
-            ],
-            'japanese': [
-                r'^第[一二三四五六七八九十\d]+章',  # Japanese chapter markers
-                r'^[一二三四五六七八九十]+、',  # Japanese numbered lists
-            ],
-            'korean': [
-                r'^제\s*\d+\s*장',  # Korean chapter markers
-                r'^제\s*\d+\s*절',  # Korean section markers
-            ]
-        }
     
-    @safe_operation("rule-based classification", fallback_value=("text", 0.1))
     def classify(self, text: str, features: FeatureVector) -> Tuple[str, float]:
         """
         Classify text using rule-based approach.
@@ -520,80 +413,41 @@ class FallbackRuleBasedClassifier:
         Returns:
             Tuple of (predicted_class, confidence_score)
         """
-        try:
-            text_clean = text.strip()
-            
-            # Rule 1: Check for numbered headings first (more specific)
-            if self._is_numbered_heading(text_clean):
-                level = self._determine_heading_level_from_numbering(text_clean)
-                return level, 0.6
-            
-            # Rule 2: Check for title patterns
-            if self._is_title(text_clean, features):
-                return 'title', 0.8
-            
-            # Rule 3: Check font size and formatting for headings
-            if features.font_size_ratio > 1.3:
-                if features.is_bold or features.capitalization_score > 0.5:
-                    # Determine heading level based on font size
-                    if features.font_size_ratio > 2.0:
-                        return 'h1', 0.7
-                    elif features.font_size_ratio > 1.6:
-                        return 'h2', 0.7
-                    else:
-                        return 'h3', 0.7
-            
-            # Rule 4: Position-based classification for titles
-            if features.position_y < 0.1 and features.text_length < 100:
-                if features.font_size_ratio > 1.1:
-                    return 'title', 0.6
-            
-            # Rule 5: Short, bold text at beginning of line
-            if (features.text_length < 80 and 
-                features.is_bold and 
-                features.position_x < 0.2):
-                return 'h3', 0.5
-            
-            # Default to regular text
-            return 'text', 0.9
-            
-        except Exception as e:
-            logger.error(f"Rule-based classification failed: {e}")
-            return 'text', 0.1
-    
-    def classify_text_only(self, text: str) -> Tuple[str, float]:
-        """
-        Classify text using only text-based rules (no features).
+        text_clean = text.strip()
         
-        Args:
-            text: Text to classify
-            
-        Returns:
-            Tuple of (predicted_class, confidence_score)
-        """
-        try:
-            text_clean = text.strip()
-            
-            # Check for numbered headings
-            if self._is_numbered_heading(text_clean):
-                level = self._determine_heading_level_from_numbering(text_clean)
-                return level, 0.5
-            
-            # Check for title patterns
-            for pattern in self.title_patterns:
-                if re.match(pattern, text_clean, re.IGNORECASE):
-                    return 'title', 0.6
-            
-            # Check for all caps (likely title or heading)
-            if text_clean.isupper() and len(text_clean) > 3:
-                return 'h1', 0.4
-            
-            # Default to regular text
-            return 'text', 0.8
-            
-        except Exception as e:
-            logger.error(f"Text-only classification failed: {e}")
-            return 'text', 0.1
+        # Rule 1: Check for numbered headings first (more specific)
+        if self._is_numbered_heading(text_clean):
+            level = self._determine_heading_level_from_numbering(text_clean)
+            return level, 0.6
+        
+        # Rule 2: Check for title patterns
+        if self._is_title(text_clean, features):
+            return 'title', 0.8
+        
+        # Rule 3: Check font size and formatting for headings
+        if features.font_size_ratio > 1.3:
+            if features.is_bold or features.capitalization_score > 0.5:
+                # Determine heading level based on font size
+                if features.font_size_ratio > 2.0:
+                    return 'h1', 0.7
+                elif features.font_size_ratio > 1.6:
+                    return 'h2', 0.7
+                else:
+                    return 'h3', 0.7
+        
+        # Rule 4: Position-based classification for titles
+        if features.position_y < 0.1 and features.text_length < 100:
+            if features.font_size_ratio > 1.1:
+                return 'title', 0.6
+        
+        # Rule 5: Short, bold text at beginning of line
+        if (features.text_length < 80 and 
+            features.is_bold and 
+            features.position_x < 0.2):
+            return 'h3', 0.5
+        
+        # Default to regular text
+        return 'text', 0.9
     
     def _is_title(self, text: str, features: FeatureVector) -> bool:
         """Check if text matches title patterns."""
@@ -618,18 +472,10 @@ class FallbackRuleBasedClassifier:
         return False
     
     def _is_numbered_heading(self, text: str) -> bool:
-        """Check if text is a numbered heading with multilingual support."""
-        # Check standard patterns
+        """Check if text is a numbered heading."""
         for pattern in self.heading_patterns:
             if re.match(pattern, text, re.IGNORECASE):
                 return True
-        
-        # Check language-specific patterns
-        for lang_patterns in self.language_specific_patterns.values():
-            for pattern in lang_patterns:
-                if re.match(pattern, text):
-                    return True
-        
         return False
     
     def _determine_heading_level_from_numbering(self, text: str) -> str:

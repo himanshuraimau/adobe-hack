@@ -34,7 +34,7 @@ class TextPreprocessor:
     
     def preprocess_blocks(self, blocks: List[TextBlock]) -> List[ProcessedBlock]:
         """
-        Preprocess a list of text blocks.
+        Preprocess a list of text blocks with memory optimization.
         
         Args:
             blocks: List of TextBlock objects to preprocess
@@ -51,26 +51,36 @@ class TextPreprocessor:
         valid_blocks = self._filter_valid_blocks(blocks)
         logger.debug(f"Filtered to {len(valid_blocks)} valid blocks")
         
-        # Step 2: Normalize text content
+        # Step 2: Normalize text content in batches for memory efficiency
         normalized_blocks = []
-        for block in valid_blocks:
-            normalized_text = self.normalizer.normalize_text(block.text)
-            if normalized_text:  # Only keep blocks with content after normalization
-                normalized_block = TextBlock(
-                    text=normalized_text,
-                    page_number=block.page_number,
-                    bbox=block.bbox,
-                    font_size=block.font_size,
-                    font_name=block.font_name,
-                    font_flags=block.font_flags
-                )
-                normalized_blocks.append(normalized_block)
+        batch_size = 100  # Process in batches to manage memory
+        
+        for i in range(0, len(valid_blocks), batch_size):
+            batch = valid_blocks[i:i + batch_size]
+            for block in batch:
+                normalized_text = self.normalizer.normalize_text(block.text)
+                if normalized_text:  # Only keep blocks with content after normalization
+                    normalized_block = TextBlock(
+                        text=normalized_text,
+                        page_number=block.page_number,
+                        bbox=block.bbox,
+                        font_size=block.font_size,
+                        font_name=block.font_name,
+                        font_flags=block.font_flags
+                    )
+                    normalized_blocks.append(normalized_block)
+            
+            # Clear batch from memory
+            del batch
         
         logger.debug(f"Normalized to {len(normalized_blocks)} blocks")
         
         # Step 3: Group related text blocks
         grouped_blocks = self.grouper.group_related_blocks(normalized_blocks)
         logger.debug(f"Grouped into {len(grouped_blocks)} blocks")
+        
+        # Clear normalized_blocks to free memory
+        del normalized_blocks
         
         # Step 4: Preserve structure and create processed blocks
         processed_blocks = self.structure_preserver.preserve_structure(grouped_blocks)
@@ -138,14 +148,52 @@ class TextNormalizer:
         return normalized.strip()
     
     def _normalize_unicode(self, text: str) -> str:
-        """Normalize Unicode characters for consistent processing."""
+        """Normalize Unicode characters for consistent processing with enhanced multilingual support."""
         try:
             # Normalize to NFC form for consistent character representation
             normalized = unicodedata.normalize('NFC', text)
             
-            # Handle common encoding issues
+            # Handle common encoding issues and special characters
             normalized = normalized.replace('\ufeff', '')  # Remove BOM
             normalized = normalized.replace('\u00a0', ' ')  # Non-breaking space to regular space
+            normalized = normalized.replace('\u2000', ' ')  # En quad
+            normalized = normalized.replace('\u2001', ' ')  # Em quad
+            normalized = normalized.replace('\u2002', ' ')  # En space
+            normalized = normalized.replace('\u2003', ' ')  # Em space
+            normalized = normalized.replace('\u2004', ' ')  # Three-per-em space
+            normalized = normalized.replace('\u2005', ' ')  # Four-per-em space
+            normalized = normalized.replace('\u2006', ' ')  # Six-per-em space
+            normalized = normalized.replace('\u2007', ' ')  # Figure space
+            normalized = normalized.replace('\u2008', ' ')  # Punctuation space
+            normalized = normalized.replace('\u2009', ' ')  # Thin space
+            normalized = normalized.replace('\u200a', ' ')  # Hair space
+            normalized = normalized.replace('\u202f', ' ')  # Narrow no-break space
+            normalized = normalized.replace('\u205f', ' ')  # Medium mathematical space
+            normalized = normalized.replace('\u3000', ' ')  # Ideographic space
+            
+            # Handle directional marks (important for RTL languages)
+            normalized = normalized.replace('\u200e', '')  # Left-to-right mark
+            normalized = normalized.replace('\u200f', '')  # Right-to-left mark
+            normalized = normalized.replace('\u202a', '')  # Left-to-right embedding
+            normalized = normalized.replace('\u202b', '')  # Right-to-left embedding
+            normalized = normalized.replace('\u202c', '')  # Pop directional formatting
+            normalized = normalized.replace('\u202d', '')  # Left-to-right override
+            normalized = normalized.replace('\u202e', '')  # Right-to-left override
+            
+            # Handle soft hyphens and zero-width characters
+            normalized = normalized.replace('\u00ad', '')  # Soft hyphen
+            normalized = normalized.replace('\u200b', '')  # Zero width space
+            normalized = normalized.replace('\u200c', '')  # Zero width non-joiner
+            normalized = normalized.replace('\u200d', '')  # Zero width joiner
+            normalized = normalized.replace('\ufeff', '')  # Zero width no-break space (BOM)
+            
+            # Normalize quotation marks for consistency
+            normalized = normalized.replace('\u201c', '"')  # Left double quotation mark
+            normalized = normalized.replace('\u201d', '"')  # Right double quotation mark
+            normalized = normalized.replace('\u2018', "'")  # Left single quotation mark
+            normalized = normalized.replace('\u2019', "'")  # Right single quotation mark
+            normalized = normalized.replace('\u201e', '"')  # Double low-9 quotation mark
+            normalized = normalized.replace('\u201a', "'")  # Single low-9 quotation mark
             
             return normalized
         except Exception as e:
