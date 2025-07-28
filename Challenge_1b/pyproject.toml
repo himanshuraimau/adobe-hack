@@ -1,0 +1,18 @@
+[project]
+name = "pdf-analysis-system"
+version = "0.1.0"
+description = "Multi-collection PDF analysis system with persona-driven content extraction"
+requires-python = ">=3.9"
+dependencies = [
+    "PyMuPDF",
+    "scikit-learn",
+    "nltk",
+    "numpy",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
