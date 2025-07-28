@@ -6,7 +6,7 @@
   - Add section identification logic based on font size and styling heuristics
   - _Requirements: 2.1, 2.2, 2.3_
 
-- [ ] 2. Implement semantic ranking system
+- [x] 2. Implement semantic ranking system
   - Create SemanticRanker class with sentence-transformers integration
   - Load all-MiniLM-L6-v2 model for embedding generation
   - Implement query embedding creation from persona and job-to-be-done

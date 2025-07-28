@@ -16,9 +16,18 @@ class Config:
     def __init__(self):
         # Base paths - go up to project root from src/pdf_extractor/config/
         self.base_dir = Path(__file__).parent.parent.parent.parent
-        self.input_dir = self.base_dir / "data" / "input"
-        self.output_dir = self.base_dir / "data" / "output"
-        self.models_dir = self.base_dir / "models"
+        
+        # Check if running in Docker container
+        if os.path.exists("/.dockerenv") or os.environ.get("DOCKER_CONTAINER"):
+            # Docker paths
+            self.input_dir = Path("/app/input")
+            self.output_dir = Path("/app/output")
+            self.models_dir = Path("/app/models")
+        else:
+            # Local development paths
+            self.input_dir = self.base_dir / "data" / "input"
+            self.output_dir = self.base_dir / "data" / "output"
+            self.models_dir = self.base_dir / "models"
         
         # Model configuration
         self.mobilebert_model_path = self.models_dir / "local_mobilebert"

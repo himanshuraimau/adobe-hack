@@ -12,8 +12,12 @@ The PDF Structure Extractor is containerized using Docker with the following spe
 ## Building the Docker Image
 
 ```bash
-# Build the Docker image
-docker build --platform linux/amd64 -t pdf-structure-extractor:latest .
+# Build the Docker image from project root (recommended)
+docker build --platform linux/amd64 -f docker/Dockerfile -t pdf-structure-extractor:latest .
+
+# Or use the automated build and test script
+cd docker
+./docker-build-test.sh
 
 # Check image size
 docker images pdf-structure-extractor:latest
@@ -43,34 +47,34 @@ docker run --platform linux/amd64 \
 ### Processing Single PDF
 
 ```bash
-# Create input and output directories
-mkdir -p input output
+# Create input and output directories (or use existing data directories)
+mkdir -p data/input data/output
 
 # Copy your PDF file to input directory
-cp your-document.pdf input/
+cp your-document.pdf data/input/
 
 # Run the container
 docker run --platform linux/amd64 \
-  -v "$(pwd)/input:/app/input:ro" \
-  -v "$(pwd)/output:/app/output" \
+  -v "$(pwd)/data/input:/app/input:ro" \
+  -v "$(pwd)/data/output:/app/output" \
   --memory=16g --cpus=8 --network=none \
   pdf-structure-extractor:latest
 
 # Check the output
-ls -la output/
-cat output/your-document.json
+ls -la data/output/
+cat data/output/your-document.json
 ```
 
 ### Processing Multiple PDFs
 
 ```bash
 # Place multiple PDF files in input directory
-cp *.pdf input/
+cp *.pdf data/input/
 
 # Run the container (processes all PDFs in input directory)
 docker run --platform linux/amd64 \
-  -v "$(pwd)/input:/app/input:ro" \
-  -v "$(pwd)/output:/app/output" \
+  -v "$(pwd)/data/input:/app/input:ro" \
+  -v "$(pwd)/data/output:/app/output" \
   --memory=16g --cpus=8 --network=none \
   pdf-structure-extractor:latest
 ```
@@ -80,8 +84,8 @@ docker run --platform linux/amd64 \
 ```bash
 # Set custom timeout (default is 10 seconds)
 docker run --platform linux/amd64 \
-  -v "$(pwd)/input:/app/input:ro" \
-  -v "$(pwd)/output:/app/output" \
+  -v "$(pwd)/data/input:/app/input:ro" \
+  -v "$(pwd)/data/output:/app/output" \
   --memory=16g --cpus=8 --network=none \
   pdf-structure-extractor:latest \
   python main.py /app/input --output /app/output --timeout 15
@@ -92,8 +96,8 @@ docker run --platform linux/amd64 \
 ```bash
 # Enable verbose logging for debugging
 docker run --platform linux/amd64 \
-  -v "$(pwd)/input:/app/input:ro" \
-  -v "$(pwd)/output:/app/output" \
+  -v "$(pwd)/data/input:/app/input:ro" \
+  -v "$(pwd)/data/output:/app/output" \
   --memory=16g --cpus=8 --network=none \
   pdf-structure-extractor:latest \
   python main.py /app/input --output /app/output --verbose
@@ -162,8 +166,8 @@ docker stats pdf-extractor-container
 # Run with resource monitoring
 docker run --name pdf-extractor-container \
   --platform linux/amd64 \
-  -v "$(pwd)/input:/app/input:ro" \
-  -v "$(pwd)/output:/app/output" \
+  -v "$(pwd)/data/input:/app/input:ro" \
+  -v "$(pwd)/data/output:/app/output" \
   --memory=16g --cpus=8 --network=none \
   pdf-structure-extractor:latest
 ```
@@ -200,7 +204,7 @@ This script tests:
 1. **Permission Denied**
    ```bash
    # Fix volume permissions
-   sudo chown -R $(id -u):$(id -g) input output
+   sudo chown -R $(id -u):$(id -g) data/input data/output
    ```
 
 2. **Out of Memory**
@@ -226,8 +230,8 @@ This script tests:
 ```bash
 # Run with debug information
 docker run --platform linux/amd64 \
-  -v "$(pwd)/input:/app/input:ro" \
-  -v "$(pwd)/output:/app/output" \
+  -v "$(pwd)/data/input:/app/input:ro" \
+  -v "$(pwd)/data/output:/app/output" \
   --memory=16g --cpus=8 --network=none \
   pdf-structure-extractor:latest \
   python main.py /app/input --output /app/output --verbose
@@ -268,3 +272,44 @@ Based on testing with sample PDFs:
 - **Python version**: 3.12
 - **PyTorch**: CPU-only version
 - **Dependencies**: PyMuPDF, transformers, numpy, psutil
+## Usage
+ Instructions
+
+To run the container with your own PDFs:
+```bash
+docker run --platform linux/amd64 \
+  -v "/path/to/your/input:/app/input:ro" \
+  -v "/path/to/your/output:/app/output" \
+  --memory=16g --cpus=8 --network=none \
+  pdf-structure-extractor:latest
+```
+
+To run with the sample data:
+```bash
+docker run --platform linux/amd64 \
+  -v "$(pwd)/data/input:/app/input:ro" \
+  -v "$(pwd)/data/output:/app/output" \
+  --memory=16g --cpus=8 --network=none \
+  pdf-structure-extractor:latest
+```
+
+## Quick Start
+
+1. **Build the image**:
+   ```bash
+   docker build --platform linux/amd64 -f docker/Dockerfile -t pdf-structure-extractor .
+   ```
+
+2. **Test with sample data**:
+   ```bash
+   docker run --platform linux/amd64 \
+     -v "$(pwd)/data/input:/app/input:ro" \
+     -v "$(pwd)/data/output:/app/output" \
+     --memory=16g --cpus=8 --network=none \
+     pdf-structure-extractor:latest
+   ```
+
+3. **Check results**:
+   ```bash
+   ls -la data/output/
+   ```

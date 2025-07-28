@@ -5,10 +5,10 @@ A machine learning-powered system for extracting structured outlines from PDF do
 ## Project Structure
 
 ```
-Challenge_1a/
+pdf-structure-extractor/
 ├── src/                           # Source code
-│   └── pdf_extractor/
-│       ├── __init__.py           # Main package exports
+│   └── pdf_extractor/            # Main package
+│       ├── __init__.py           # Package exports
 │       ├── core/                 # Core processing modules
 │       │   ├── __init__.py
 │       │   ├── pdf_parser.py     # PDF text extraction
@@ -28,30 +28,33 @@ Challenge_1a/
 │           └── __init__.py
 ├── tests/                        # Test suite
 │   ├── __init__.py
-│   ├── test_*.py                # Unit and integration tests
+│   └── test_*.py                # Unit and integration tests
 ├── scripts/                      # Demo and utility scripts
 │   ├── __init__.py
 │   ├── demo_json_builder.py     # JSON builder demo
 │   ├── performance_profiler.py  # Performance monitoring
 │   ├── final_performance_test.py # 10-second compliance test
-│   └── simple_performance_test.py # Component performance tests
+│   ├── simple_performance_test.py # Component performance tests
+│   └── check_dependencies.py    # Dependency verification
 ├── docs/                         # Documentation
-│   ├── README.md                # Main documentation
+│   ├── README.md                # Detailed documentation
 │   ├── DOCKER_USAGE.md          # Docker instructions
 │   └── MULTILINGUAL_IMPROVEMENTS.md # Multilingual features
 ├── docker/                       # Docker configuration
 │   ├── Dockerfile               # Container definition
 │   ├── .dockerignore           # Docker ignore rules
-│   └── docker-build-test.sh    # Build script
+│   └── docker-build-test.sh    # Build and test script
 ├── data/                         # Data directories
 │   ├── input/                   # Input PDF files
 │   └── output/                  # Generated JSON outputs
 ├── models/                       # MobileBERT model files
-│   └── local_mobilebert/        # Pre-trained model
+│   └── local_mobilebert/        # Pre-trained model (95MB)
 ├── logs/                         # Application logs
+│   └── errors.log              # Error log file
 ├── main.py                      # Main application entry point
 ├── pyproject.toml              # Project configuration
-└── uv.lock                     # Dependency lock file
+├── uv.lock                     # Dependency lock file
+└── __init__.py                 # Root package marker
 ```
 
 ## Installation
@@ -82,8 +85,12 @@ pip install -e .
 
 Build the Docker image:
 ```bash
+# Build from project root (recommended)
+docker build --platform linux/amd64 -f docker/Dockerfile -t pdf-structure-extractor .
+
+# Or use the automated build and test script
 cd docker
-docker build -t pdf-extractor .
+./docker-build-test.sh
 ```
 
 ## Usage
@@ -100,6 +107,18 @@ Process all PDFs in a directory:
 python main.py data/input/ -o data/output/
 ```
 
+Example with sample files:
+```bash
+# Process all sample PDFs
+python main.py data/input/ -o data/output/
+
+# Process with verbose logging
+python main.py data/input/ -o data/output/ --verbose
+
+# Process with custom timeout
+python main.py data/input/ -o data/output/ --timeout 15
+```
+
 Options:
 - `-o, --output`: Output directory for JSON files (default: data/output/)
 - `--timeout`: Processing timeout in seconds (default: 10)
@@ -111,15 +130,19 @@ Process PDFs using Docker:
 ```bash
 # Process all PDFs in input directory
 docker run --rm \
-  -v "$(pwd)/data/input:/app/input" \
+  --platform linux/amd64 \
+  -v "$(pwd)/data/input:/app/input:ro" \
   -v "$(pwd)/data/output:/app/output" \
-  pdf-extractor
+  --memory=16g --cpus=8 --network=none \
+  pdf-structure-extractor
 
 # Process with custom timeout
 docker run --rm \
-  -v "$(pwd)/data/input:/app/input" \
+  --platform linux/amd64 \
+  -v "$(pwd)/data/input:/app/input:ro" \
   -v "$(pwd)/data/output:/app/output" \
-  pdf-extractor python main.py /app/input --output /app/output --timeout 15
+  --memory=16g --cpus=8 --network=none \
+  pdf-structure-extractor python main.py /app/input --output /app/output --timeout 15
 ```
 
 ### Python API

@@ -8,6 +8,8 @@ dependencies = [
     "scikit-learn",
     "nltk",
     "numpy",
+    "sentence-transformers",
+    "psutil",
 ]
 
 [build-system]

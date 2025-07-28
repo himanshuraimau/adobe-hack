@@ -43,7 +43,9 @@ trap cleanup EXIT
 
 # Step 1: Build the Docker image
 print_status "Building Docker image: $IMAGE_NAME:$TAG"
-docker build --platform linux/amd64 -t $IMAGE_NAME:$TAG .
+# Build from project root with Dockerfile in docker subdirectory
+cd "$(dirname "$0")/.." # Go to project root
+docker build --platform linux/amd64 -f docker/Dockerfile -t $IMAGE_NAME:$TAG .
 
 if [ $? -eq 0 ]; then
     print_status "Docker image built successfully"
@@ -67,7 +69,9 @@ print_status "Setting up test environment..."
 mkdir -p test_input test_output
 
 # Copy sample PDFs to test input
-if [ -d "input" ]; then
+if [ -d "data/input" ]; then
+    cp data/input/*.pdf test_input/ 2>/dev/null || print_warning "No PDF files found in data/input directory"
+elif [ -d "input" ]; then
     cp input/*.pdf test_input/ 2>/dev/null || print_warning "No PDF files found in input directory"
 fi
 
@@ -222,8 +226,8 @@ fi
 print_status "=== Usage Instructions ==="
 echo "To run the container:"
 echo "docker run --platform linux/amd64 \\"
-echo "  -v /path/to/input:/app/input:ro \\"
-echo "  -v /path/to/output:/app/output \\"
+echo "  -v \"\$(pwd)/data/input:/app/input:ro\" \\"
+echo "  -v \"\$(pwd)/data/output:/app/output\" \\"
 echo "  --memory=16g --cpus=8 --network=none \\"
 echo "  $IMAGE_NAME:$TAG"
 

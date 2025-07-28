@@ -35,9 +35,9 @@ The system follows a pipeline architecture with six main components:
 
 ### Local Installation
 
-1. Clone the repository and navigate to the Challenge_1a directory:
+1. Clone the repository and navigate to the project directory:
 ```bash
-cd Challenge_1a
+cd pdf-structure-extractor
 ```
 
 2. Install dependencies using uv (recommended) or pip:
@@ -49,13 +49,18 @@ uv sync
 pip install -e .
 ```
 
-3. The MobileBERT model is included in the `models/local_mobilebert/` directory.
+3. The MobileBERT model is included in the `models/local_mobilebert/` directory (95MB).
 
 ### Docker Installation
 
-Build the Docker image:
+Build the Docker image from project root:
 ```bash
-docker build -t pdf-extractor .
+# Build from project root (recommended)
+docker build --platform linux/amd64 -f docker/Dockerfile -t pdf-structure-extractor .
+
+# Or use the automated build and test script
+cd docker
+./docker-build-test.sh
 ```
 
 ## Usage
@@ -64,16 +69,28 @@ docker build -t pdf-extractor .
 
 Process a single PDF file:
 ```bash
-python main.py input/document.pdf -o output/
+python main.py data/input/document.pdf -o data/output/
 ```
 
 Process all PDFs in a directory:
 ```bash
-python main.py input/ -o output/
+python main.py data/input/ -o data/output/
+```
+
+Example with sample files:
+```bash
+# Process all sample PDFs
+python main.py data/input/ -o data/output/
+
+# Process with verbose logging
+python main.py data/input/ -o data/output/ --verbose
+
+# Process with custom timeout
+python main.py data/input/ -o data/output/ --timeout 15
 ```
 
 Options:
-- `-o, --output`: Output directory for JSON files (default: output/)
+- `-o, --output`: Output directory for JSON files (default: data/output/)
 - `--timeout`: Processing timeout in seconds (default: 10)
 - `-v, --verbose`: Enable verbose logging
 
@@ -83,15 +100,19 @@ Process PDFs using Docker:
 ```bash
 # Process all PDFs in input directory
 docker run --rm \
-  -v "$(pwd)/input:/app/input" \
-  -v "$(pwd)/output:/app/output" \
-  pdf-extractor
+  --platform linux/amd64 \
+  -v "$(pwd)/data/input:/app/input:ro" \
+  -v "$(pwd)/data/output:/app/output" \
+  --memory=16g --cpus=8 --network=none \
+  pdf-structure-extractor
 
 # Process with custom timeout
 docker run --rm \
-  -v "$(pwd)/input:/app/input" \
-  -v "$(pwd)/output:/app/output" \
-  pdf-extractor python main.py /app/input --output /app/output --timeout 15
+  --platform linux/amd64 \
+  -v "$(pwd)/data/input:/app/input:ro" \
+  -v "$(pwd)/data/output:/app/output" \
+  --memory=16g --cpus=8 --network=none \
+  pdf-structure-extractor python main.py /app/input --output /app/output --timeout 15
 ```
 
 ## Output Format
@@ -329,22 +350,56 @@ python main.py input.pdf -o output/ --verbose
 
 ### Project Structure
 ```
-Challenge_1a/
-├── main.py              # Main application entry point
-├── config.py            # Configuration management
-├── pdf_parser.py        # PDF text extraction
-├── preprocessor.py      # Text preprocessing
-├── feature_extractor.py # Feature engineering
-├── classifier.py        # MobileBERT classification
-├── structure_analyzer.py # Hierarchy building
-├── json_builder.py      # Output generation
-├── error_handler.py     # Error management
-├── models.py           # Data models
-├── models/             # MobileBERT model files
-├── input/              # Sample input PDFs
-├── output/             # Generated JSON outputs
-├── logs/               # Application logs
-└── tests/              # Test suite
+pdf-structure-extractor/
+├── src/                           # Source code
+│   └── pdf_extractor/            # Main package
+│       ├── __init__.py           # Package exports
+│       ├── core/                 # Core processing modules
+│       │   ├── __init__.py
+│       │   ├── pdf_parser.py     # PDF text extraction
+│       │   ├── preprocessor.py   # Text preprocessing
+│       │   ├── feature_extractor.py # Feature engineering
+│       │   ├── classifier.py     # MobileBERT classification
+│       │   ├── structure_analyzer.py # Document hierarchy
+│       │   ├── json_builder.py   # JSON output generation
+│       │   └── error_handler.py  # Error handling
+│       ├── models/               # Data models
+│       │   ├── __init__.py
+│       │   └── models.py         # Core data structures
+│       ├── config/               # Configuration
+│       │   ├── __init__.py
+│       │   └── config.py         # System configuration
+│       └── utils/                # Utility functions
+│           └── __init__.py
+├── tests/                        # Test suite
+│   ├── __init__.py
+│   └── test_*.py                # Unit and integration tests
+├── scripts/                      # Demo and utility scripts
+│   ├── __init__.py
+│   ├── demo_json_builder.py     # JSON builder demo
+│   ├── performance_profiler.py  # Performance monitoring
+│   ├── final_performance_test.py # 10-second compliance test
+│   ├── simple_performance_test.py # Component performance tests
+│   └── check_dependencies.py    # Dependency verification
+├── docs/                         # Documentation
+│   ├── README.md                # Detailed documentation
+│   ├── DOCKER_USAGE.md          # Docker instructions
+│   └── MULTILINGUAL_IMPROVEMENTS.md # Multilingual features
+├── docker/                       # Docker configuration
+│   ├── Dockerfile               # Container definition
+│   ├── .dockerignore           # Docker ignore rules
+│   └── docker-build-test.sh    # Build and test script
+├── data/                         # Data directories
+│   ├── input/                   # Input PDF files
+│   └── output/                  # Generated JSON outputs
+├── models/                       # MobileBERT model files
+│   └── local_mobilebert/        # Pre-trained model (95MB)
+├── logs/                         # Application logs
+│   └── errors.log              # Error log file
+├── main.py                      # Main application entry point
+├── pyproject.toml              # Project configuration
+├── uv.lock                     # Dependency lock file
+└── __init__.py                 # Root package marker
 ```
 
 ### Contributing
