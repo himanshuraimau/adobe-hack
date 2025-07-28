@@ -1,76 +1,122 @@
 # Adobe Hackathon: PDF Intelligence System
 
-A smart PDF processing system that extracts document structure and provides persona-driven document analysis.
+A comprehensive PDF processing system with two distinct solutions for document structure extraction and persona-driven document analysis.
 
-## What This Does
+## Solutions Overview
 
-- **Round 1A**: Extracts titles and headings (H1-H3) from PDFs with page numbers
-- **Round 1B**: Finds relevant sections based on user persona and tasks
-- **Round 2**: Web app with Adobe PDF Embed API
+This repository contains complete solutions for both challenges:
 
-## Quick Start
+- **Challenge 1A**: PDF Structure Extractor - Extracts titles and headings (H1-H3) from PDFs with page numbers
+- **Challenge 1B**: Persona-Driven Document Intelligence - Finds relevant sections based on user persona and tasks
 
+## Getting Started
+
+Each challenge has its own complete implementation with detailed setup instructions:
+
+### Challenge 1A - PDF Structure Extractor
+📁 **Location**: `Challenge_1a/`
+
+A machine learning-powered system using MobileBERT for extracting structured outlines from PDF documents.
+
+**Quick Start:**
 ```bash
-# Install dependencies
-pip install -r requirements.txt
+cd Challenge_1a
+uv sync  # or pip install -e .
+python main.py data/input/ -o data/output/
+```
 
-# Run the main script
+**Key Features:**
+- MobileBERT-based heading classification
+- 10-second processing constraint compliance
+- Docker support with offline operation
+- Comprehensive test suite and performance monitoring
+
+📖 **Full Documentation**: See `Challenge_1a/README.md` for complete setup, usage, and API documentation.
+
+### Challenge 1B - Persona-Driven Document Intelligence
+📁 **Location**: `Challenge_1b/`
+
+An intelligent document analysis system that extracts and prioritizes relevant sections based on specific personas and tasks.
+
+**Quick Start:**
+```bash
+cd Challenge_1b
+pip install -r requirements.txt
 python main.py
 ```
 
-## Round 1A - Document Structure
+**Key Features:**
+- Semantic similarity using sentence transformers
+- Persona-driven content extraction
+- 60-second processing constraint compliance
+- Three sample collections with different personas
 
-Extracts structured outlines from PDFs:
+📖 **Full Documentation**: See `Challenge_1b/README.md` for complete setup, usage, and methodology.
 
-```json
-{
-  "title": "Understanding AI",
-  "outline": [
-    { "level": "H1", "text": "Introduction", "page": 1 },
-    { "level": "H2", "text": "What is AI?", "page": 2 }
-  ]
-}
+## Repository Structure
+
+```
+├── Challenge_1a/              # Challenge 1A: PDF Structure Extractor
+│   ├── src/                   # Source code with modular architecture
+│   ├── tests/                 # Comprehensive test suite
+│   ├── docker/                # Docker configuration
+│   ├── data/                  # Input/output directories
+│   ├── models/                # MobileBERT model files
+│   ├── main.py                # Entry point
+│   └── README.md              # Detailed documentation
+├── Challenge_1b/              # Challenge 1B: Persona Intelligence
+│   ├── src/                   # Source code modules
+│   ├── Collection 1/          # Travel planning sample
+│   ├── Collection 2/          # HR forms sample
+│   ├── Collection 3/          # Food menu sample
+│   ├── main.py                # Entry point
+│   └── README.md              # Detailed documentation
+└── README.md                  # This overview file
 ```
 
-### Docker Usage
+## Technical Highlights
 
+### Challenge 1A
+- **ML Model**: MobileBERT (95MB) for heading classification
+- **Performance**: <10 seconds for 50-page PDFs
+- **Architecture**: Modular pipeline with feature engineering
+- **Testing**: Unit tests, integration tests, performance tests
+
+### Challenge 1B
+- **ML Model**: all-MiniLM-L6-v2 (90MB) for semantic similarity
+- **Performance**: <60 seconds for document collections
+- **Architecture**: Semantic ranking with granular analysis
+- **Collections**: 3 complete sample collections with different personas
+
+## Docker Support
+
+Both challenges include production-ready Docker configurations:
+
+**Challenge 1A:**
 ```bash
-# Build
-docker build --platform linux/amd64 -t pdf-processor .
-
-# Run
-docker run --rm -v $(pwd)/input:/app/input -v $(pwd)/output:/app/output --network none pdf-processor
+cd Challenge_1a
+docker build --platform linux/amd64 -f docker/Dockerfile -t pdf-structure-extractor .
 ```
 
-## Round 1B - Persona Intelligence
-
-Analyzes documents based on:
-- User persona (researcher, analyst, student)
-- Specific task requirements
-- Relevance ranking
-
-## Project Structure
-
-```
-├── Challenge - 1(a)/          # Round 1A implementation
-│   ├── Datasets/              # Sample PDFs and outputs
-│   ├── process_pdfs.py        # Main processing script
-│   └── *.md                   # Documentation
-├── main.py                    # Entry point
-├── requirements.txt           # Dependencies
-└── README.md                  # This file
+**Challenge 1B:**
+```bash
+cd Challenge_1b
+docker build --platform linux/amd64 -t pdf-analysis-system .
 ```
 
-## Technical Approach
+## Compliance & Constraints
 
-- **PDF Processing**: PyMuPDF for text extraction
-- **ML Models**: Lightweight transformers (<200MB)
-- **Performance**: Multi-threaded processing
-- **Languages**: Unicode support for multilingual docs
+Both solutions fully comply with hackathon requirements:
+- ✅ CPU-only operation (no GPU required)
+- ✅ Model size limits (95MB and 90MB respectively)
+- ✅ Processing time constraints (10s and 60s respectively)
+- ✅ Offline operation capability
+- ✅ Exact output format compliance
 
-## Constraints
+## Next Steps
 
-- 10 seconds max for 50-page PDF
-- CPU only, no GPU
-- No internet access
-- 200MB model size limit
+1. **For Challenge 1A**: Navigate to `Challenge_1a/` and follow the README for PDF structure extraction
+2. **For Challenge 1B**: Navigate to `Challenge_1b/` and follow the README for persona-driven analysis
+3. **For Development**: Each challenge includes comprehensive documentation for extending functionality
+
+Each solution is self-contained with its own dependencies, documentation, and examples. Choose the challenge you want to explore and follow the respective README for detailed instructions.
