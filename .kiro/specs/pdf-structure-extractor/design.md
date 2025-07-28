@@ -6,7 +6,7 @@ The PDF Structure Extractor is a Python-based system that processes PDF document
 
 The architecture follows a pipeline approach: PDF parsing → text preprocessing → feature extraction → ML-based classification → JSON output generation. The system is designed to run in a containerized environment with strict performance constraints (10-second processing time, CPU-only, 200MB model limit).
 
-**Implementation Location**: All code will be implemented within the `problem1a` folder, utilizing the existing project structure with pyproject.toml dependencies (PyMuPDF, torch, transformers) and the local MobileBERT model located in `problem1a/models/local_mobilebert/`.
+**Implementation Location**: All code will be implemented within the `Challenge_1a` folder, utilizing the existing project structure with pyproject.toml dependencies (PyMuPDF, torch, transformers) and the local MobileBERT model located in `Challenge_1a/models/local_mobilebert/`.
 
 ## Architecture
 
