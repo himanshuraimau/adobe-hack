@@ -1,0 +1,533 @@
+2025-07-28 22:48:01,178 - root - INFO - ============================================================
+2025-07-28 22:48:01,178 - root - INFO - PDF Analysis System - Starting
+2025-07-28 22:48:01,178 - root - INFO - ============================================================
+2025-07-28 22:48:01,178 - root - INFO - System requirements check passed
+2025-07-28 22:48:01,183 - root - INFO - Performance optimizations applied
+2025-07-28 22:48:01,183 - root - INFO - Collection processor initialized successfully
+2025-07-28 22:48:01,183 - root - INFO - Starting collection discovery in: .
+2025-07-28 22:48:01,183 - root - INFO - Starting collection processing
+2025-07-28 22:48:01,183 - root - INFO - Discovered 3 collections: ['./Collection 1', './Collection 2', './Collection 3']
+2025-07-28 22:48:01,183 - pdf_analysis.collection_processor - INFO - Processing collection: ./Collection 1
+2025-07-28 22:48:01,184 - root - INFO - Loaded input config from ./Collection 1/challenge1b_input.json
+2025-07-28 22:48:01,184 - root - INFO -   - Persona: Travel Planner
+2025-07-28 22:48:01,184 - root - INFO -   - Task: Plan a trip of 4 days for a group of 10 college friends.
+2025-07-28 22:48:01,184 - root - INFO -   - Documents: 7
+2025-07-28 22:48:01,184 - root - INFO - Found 7 PDF files in ./Collection 1/PDFs
+2025-07-28 22:48:01,184 - pdf_analysis.collection_processor - INFO - Processing 7 PDFs in 2 batches
+2025-07-28 22:48:01,184 - pdf_analysis.collection_processor - INFO - Processing PDF batch 1: 5 files
+2025-07-28 22:48:01,184 - pdf_analysis.collection_processor - DEBUG - Extracting sections from: ./Collection 1/PDFs/South of France - Cities.pdf
+2025-07-28 22:48:01,201 - pdf_analysis.pdf_analyzer - DEBUG - Extracted 380 text blocks from ./Collection 1/PDFs/South of France - Cities.pdf
+2025-07-28 22:48:01,201 - pdf_analysis.collection_processor - DEBUG - Extracted 63 sections from ./Collection 1/PDFs/South of France - Cities.pdf
+2025-07-28 22:48:01,202 - pdf_analysis.collection_processor - DEBUG - Extracting sections from: ./Collection 1/PDFs/South of France - Cuisine.pdf
+2025-07-28 22:48:01,211 - pdf_analysis.pdf_analyzer - DEBUG - Extracted 205 text blocks from ./Collection 1/PDFs/South of France - Cuisine.pdf
+2025-07-28 22:48:01,211 - pdf_analysis.collection_processor - DEBUG - Extracted 8 sections from ./Collection 1/PDFs/South of France - Cuisine.pdf
+2025-07-28 22:48:01,211 - pdf_analysis.collection_processor - DEBUG - Extracting sections from: ./Collection 1/PDFs/South of France - History.pdf
+2025-07-28 22:48:01,223 - pdf_analysis.pdf_analyzer - DEBUG - Extracted 329 text blocks from ./Collection 1/PDFs/South of France - History.pdf
+2025-07-28 22:48:01,224 - pdf_analysis.collection_processor - DEBUG - Extracted 43 sections from ./Collection 1/PDFs/South of France - History.pdf
+2025-07-28 22:48:01,224 - pdf_analysis.collection_processor - DEBUG - Extracting sections from: ./Collection 1/PDFs/South of France - Restaurants and Hotels.pdf
+2025-07-28 22:48:01,238 - pdf_analysis.pdf_analyzer - DEBUG - Extracted 368 text blocks from ./Collection 1/PDFs/South of France - Restaurants and Hotels.pdf
+2025-07-28 22:48:01,239 - pdf_analysis.collection_processor - DEBUG - Extracted 10 sections from ./Collection 1/PDFs/South of France - Restaurants and Hotels.pdf
+2025-07-28 22:48:01,239 - pdf_analysis.collection_processor - DEBUG - Extracting sections from: ./Collection 1/PDFs/South of France - Things to Do.pdf
+2025-07-28 22:48:01,251 - pdf_analysis.pdf_analyzer - DEBUG - Extracted 442 text blocks from ./Collection 1/PDFs/South of France - Things to Do.pdf
+2025-07-28 22:48:01,252 - pdf_analysis.collection_processor - DEBUG - Extracted 108 sections from ./Collection 1/PDFs/South of France - Things to Do.pdf
+2025-07-28 22:48:01,252 - pdf_analysis.collection_processor - INFO - Batch 1/2 complete: 232 sections extracted
+2025-07-28 22:48:01,252 - pdf_analysis.collection_processor - INFO - Processing PDF batch 2: 2 files
+2025-07-28 22:48:01,252 - pdf_analysis.collection_processor - DEBUG - Extracting sections from: ./Collection 1/PDFs/South of France - Tips and Tricks.pdf
+2025-07-28 22:48:01,262 - pdf_analysis.pdf_analyzer - DEBUG - Extracted 343 text blocks from ./Collection 1/PDFs/South of France - Tips and Tricks.pdf
+2025-07-28 22:48:01,263 - pdf_analysis.collection_processor - DEBUG - Extracted 107 sections from ./Collection 1/PDFs/South of France - Tips and Tricks.pdf
+2025-07-28 22:48:01,263 - pdf_analysis.collection_processor - DEBUG - Extracting sections from: ./Collection 1/PDFs/South of France - Traditions and Culture.pdf
+2025-07-28 22:48:01,269 - pdf_analysis.pdf_analyzer - DEBUG - Extracted 121 text blocks from ./Collection 1/PDFs/South of France - Traditions and Culture.pdf
+2025-07-28 22:48:01,269 - pdf_analysis.collection_processor - DEBUG - Extracted 18 sections from ./Collection 1/PDFs/South of France - Traditions and Culture.pdf
+2025-07-28 22:48:01,269 - pdf_analysis.collection_processor - INFO - Batch 2/2 complete: 125 sections extracted
+2025-07-28 22:48:01,269 - pdf_analysis.collection_processor - INFO - Total sections extracted: 357
+2025-07-28 22:48:01,270 - root - INFO - Loading sentence transformer model: all-MiniLM-L6-v2
+2025-07-28 22:48:01,271 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-07-28 22:48:01,637 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 307 0
+2025-07-28 22:48:01,658 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json HTTP/1.1" 200 0
+2025-07-28 22:48:01,900 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 307 0
+2025-07-28 22:48:01,918 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json HTTP/1.1" 200 0
+2025-07-28 22:48:02,251 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 307 0
+2025-07-28 22:48:02,271 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json HTTP/1.1" 200 0
+2025-07-28 22:48:02,556 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/1.1" 307 0
+2025-07-28 22:48:02,575 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/README.md HTTP/1.1" 200 0
+2025-07-28 22:48:02,865 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/1.1" 307 0
+2025-07-28 22:48:02,882 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json HTTP/1.1" 200 0
+2025-07-28 22:48:03,170 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 307 0
+2025-07-28 22:48:03,190 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/sentence_bert_config.json HTTP/1.1" 200 0
+2025-07-28 22:48:03,479 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json HTTP/1.1" 404 0
+2025-07-28 22:48:03,786 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/1.1" 307 0
+2025-07-28 22:48:03,805 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json HTTP/1.1" 200 0
+2025-07-28 22:48:04,502 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/1.1" 307 0
+2025-07-28 22:48:04,521 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/tokenizer_config.json HTTP/1.1" 200 0
+2025-07-28 22:48:04,773 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=False&expand=False HTTP/1.1" 404 64
+2025-07-28 22:48:05,039 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json HTTP/1.1" 307 0
+2025-07-28 22:48:05,056 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/1_Pooling%2Fconfig.json HTTP/1.1" 200 0
+2025-07-28 22:48:05,424 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/1.1" 200 6849
+2025-07-28 22:48:05,445 - root - INFO - Model loaded successfully. Embedding dimension: 384
+2025-07-28 22:48:05,445 - root - INFO - Creating query embedding for: 'Travel Planner Plan a trip of 4 days for a group of 10 college friends.'
+2025-07-28 22:48:05,456 - root - INFO - Generating embeddings for 357 sections
+2025-07-28 22:48:05,456 - root - DEBUG - Processing embedding batch 1/12
+2025-07-28 22:48:05,727 - root - DEBUG - Processing embedding batch 2/12
+2025-07-28 22:48:06,272 - root - DEBUG - Processing embedding batch 3/12
+2025-07-28 22:48:06,912 - root - DEBUG - Processing embedding batch 4/12
+2025-07-28 22:48:07,538 - root - DEBUG - Processing embedding batch 5/12
+2025-07-28 22:48:07,610 - root - DEBUG - Processing embedding batch 6/12
+2025-07-28 22:48:07,705 - root - DEBUG - Processing embedding batch 7/12
+2025-07-28 22:48:08,146 - root - DEBUG - Processing embedding batch 8/12
+2025-07-28 22:48:08,629 - root - DEBUG - Processing embedding batch 9/12
+2025-07-28 22:48:08,710 - root - DEBUG - Processing embedding batch 10/12
+2025-07-28 22:48:08,782 - root - DEBUG - Processing embedding batch 11/12
+2025-07-28 22:48:08,996 - root - DEBUG - Processing embedding batch 12/12
+2025-07-28 22:48:09,047 - root - INFO - Ranked 357 sections by semantic similarity
+2025-07-28 22:48:09,047 - pdf_analysis.collection_processor - INFO - Ranked 357 sections by relevance
+2025-07-28 22:48:09,047 - pdf_analysis.collection_processor - INFO - Selected top 10 sections for detailed analysis
+2025-07-28 22:48:09,047 - root - INFO - Starting sentence-level analysis for 10 sections
+2025-07-28 22:48:09,047 - root - DEBUG - Analyzing sentences for section 1/10: Pack a Day Bag:
+2025-07-28 22:48:09,053 - root - DEBUG - Processed 1 sentences, selected top 1 for section: Pack a Day Bag:
+2025-07-28 22:48:09,053 - root - DEBUG - Analyzing sentences for section 2/10: Travel Tips
+2025-07-28 22:48:09,053 - root - DEBUG - No sentences found in section: Travel Tips
+2025-07-28 22:48:09,053 - root - DEBUG - Analyzing sentences for section 3/10: Snacks:
+2025-07-28 22:48:09,058 - root - DEBUG - Processed 1 sentences, selected top 1 for section: Snacks:
+2025-07-28 22:48:09,058 - root - DEBUG - Analyzing sentences for section 4/10: Beach Trips
+2025-07-28 22:48:09,058 - root - DEBUG - No sentences found in section: Beach Trips
+2025-07-28 22:48:09,058 - root - DEBUG - Analyzing sentences for section 5/10: Wine Tours
+2025-07-28 22:48:09,058 - root - DEBUG - No sentences found in section: Wine Tours
+2025-07-28 22:48:09,058 - root - DEBUG - Analyzing sentences for section 6/10: Additional Tips:
+2025-07-28 22:48:09,065 - root - DEBUG - Processed 1 sentences, selected top 1 for section: Additional Tips:
+2025-07-28 22:48:09,065 - root - DEBUG - Analyzing sentences for section 7/10: Tips and Tricks for Packing
+2025-07-28 22:48:09,065 - root - DEBUG - No sentences found in section: Tips and Tricks for Packing
+2025-07-28 22:48:09,065 - root - DEBUG - Analyzing sentences for section 8/10: Conclusion
+2025-07-28 22:48:09,076 - root - DEBUG - Processed 4 sentences, selected top 4 for section: Conclusion
+2025-07-28 22:48:09,076 - root - DEBUG - Analyzing sentences for section 9/10: Additional Tips:
+2025-07-28 22:48:09,082 - root - DEBUG - Processed 1 sentences, selected top 1 for section: Additional Tips:
+2025-07-28 22:48:09,082 - root - DEBUG - Analyzing sentences for section 10/10: Leave Room for Souvenirs:
+2025-07-28 22:48:09,087 - root - DEBUG - Processed 1 sentences, selected top 1 for section: Leave Room for Souvenirs:
+2025-07-28 22:48:09,088 - root - INFO - Completed sentence-level analysis: 6 sections processed successfully
+2025-07-28 22:48:09,088 - pdf_analysis.collection_processor - INFO - Completed sentence analysis for 6 sections
+2025-07-28 22:48:09,089 - pdf_analysis.output_generator - INFO - Output saved successfully: ./Collection 1/challenge1b_output.json (72770 bytes)
+2025-07-28 22:48:09,089 - pdf_analysis.collection_processor - INFO - Output saved to: ./Collection 1/challenge1b_output.json
+2025-07-28 22:48:09,089 - pdf_analysis.collection_processor - INFO - Successfully processed collection ./Collection 1
+2025-07-28 22:48:09,089 - pdf_analysis.collection_processor - INFO -   - Documents processed: 7
+2025-07-28 22:48:09,089 - pdf_analysis.collection_processor - INFO -   - Sections extracted: 357
+2025-07-28 22:48:09,090 - pdf_analysis.collection_processor - INFO -   - Sections ranked: 357
+2025-07-28 22:48:09,090 - pdf_analysis.collection_processor - INFO -   - Top sections analyzed: 10
+2025-07-28 22:48:09,090 - pdf_analysis.collection_processor - INFO -   - Sentence analysis results: 6
+2025-07-28 22:48:09,090 - pdf_analysis.collection_processor - INFO - Processing collection: ./Collection 2
+2025-07-28 22:48:09,090 - root - INFO - Loaded input config from ./Collection 2/challenge1b_input.json
+2025-07-28 22:48:09,090 - root - INFO -   - Persona: HR professional
+2025-07-28 22:48:09,090 - root - INFO -   - Task: Create and manage fillable forms for onboarding and compliance.
+2025-07-28 22:48:09,090 - root - INFO -   - Documents: 15
+2025-07-28 22:48:09,090 - root - INFO - Found 15 PDF files in ./Collection 2/PDFs
+2025-07-28 22:48:09,090 - pdf_analysis.collection_processor - INFO - Processing 15 PDFs in 3 batches
+2025-07-28 22:48:09,090 - pdf_analysis.collection_processor - INFO - Processing PDF batch 1: 5 files
+2025-07-28 22:48:09,090 - pdf_analysis.collection_processor - DEBUG - Extracting sections from: ./Collection 2/PDFs/Learn Acrobat - Create and Convert_1.pdf
+2025-07-28 22:48:09,236 - pdf_analysis.pdf_analyzer - DEBUG - Extracted 1479 text blocks from ./Collection 2/PDFs/Learn Acrobat - Create and Convert_1.pdf
+2025-07-28 22:48:09,239 - pdf_analysis.collection_processor - DEBUG - Extracted 352 sections from ./Collection 2/PDFs/Learn Acrobat - Create and Convert_1.pdf
+2025-07-28 22:48:09,239 - pdf_analysis.collection_processor - DEBUG - Extracting sections from: ./Collection 2/PDFs/Learn Acrobat - Create and Convert_2.pdf
+2025-07-28 22:48:09,265 - pdf_analysis.pdf_analyzer - DEBUG - Extracted 805 text blocks from ./Collection 2/PDFs/Learn Acrobat - Create and Convert_2.pdf
+2025-07-28 22:48:09,267 - pdf_analysis.collection_processor - DEBUG - Extracted 241 sections from ./Collection 2/PDFs/Learn Acrobat - Create and Convert_2.pdf
+2025-07-28 22:48:09,267 - pdf_analysis.collection_processor - DEBUG - Extracting sections from: ./Collection 2/PDFs/Learn Acrobat - Edit_1.pdf
+2025-07-28 22:48:09,329 - pdf_analysis.pdf_analyzer - DEBUG - Extracted 541 text blocks from ./Collection 2/PDFs/Learn Acrobat - Edit_1.pdf
+2025-07-28 22:48:09,330 - pdf_analysis.collection_processor - DEBUG - Extracted 81 sections from ./Collection 2/PDFs/Learn Acrobat - Edit_1.pdf
+2025-07-28 22:48:09,330 - pdf_analysis.collection_processor - DEBUG - Extracting sections from: ./Collection 2/PDFs/Learn Acrobat - Edit_2.pdf
+2025-07-28 22:48:09,383 - pdf_analysis.pdf_analyzer - DEBUG - Extracted 631 text blocks from ./Collection 2/PDFs/Learn Acrobat - Edit_2.pdf
+2025-07-28 22:48:09,384 - pdf_analysis.collection_processor - DEBUG - Extracted 144 sections from ./Collection 2/PDFs/Learn Acrobat - Edit_2.pdf
+2025-07-28 22:48:09,384 - pdf_analysis.collection_processor - DEBUG - Extracting sections from: ./Collection 2/PDFs/Learn Acrobat - Export_1.pdf
+2025-07-28 22:48:09,450 - pdf_analysis.pdf_analyzer - DEBUG - Extracted 1173 text blocks from ./Collection 2/PDFs/Learn Acrobat - Export_1.pdf
+2025-07-28 22:48:09,452 - pdf_analysis.collection_processor - DEBUG - Extracted 281 sections from ./Collection 2/PDFs/Learn Acrobat - Export_1.pdf
+2025-07-28 22:48:09,452 - pdf_analysis.collection_processor - INFO - Batch 1/3 complete: 1099 sections extracted
+2025-07-28 22:48:09,452 - pdf_analysis.collection_processor - INFO - Processing PDF batch 2: 5 files
+2025-07-28 22:48:09,452 - pdf_analysis.collection_processor - DEBUG - Extracting sections from: ./Collection 2/PDFs/Learn Acrobat - Export_2.pdf
+2025-07-28 22:48:09,456 - pdf_analysis.pdf_analyzer - DEBUG - Extracted 91 text blocks from ./Collection 2/PDFs/Learn Acrobat - Export_2.pdf
+2025-07-28 22:48:09,457 - pdf_analysis.collection_processor - DEBUG - Extracted 18 sections from ./Collection 2/PDFs/Learn Acrobat - Export_2.pdf
+2025-07-28 22:48:09,457 - pdf_analysis.collection_processor - DEBUG - Extracting sections from: ./Collection 2/PDFs/Learn Acrobat - Fill and Sign.pdf
+2025-07-28 22:48:09,595 - pdf_analysis.pdf_analyzer - DEBUG - Extracted 558 text blocks from ./Collection 2/PDFs/Learn Acrobat - Fill and Sign.pdf
+2025-07-28 22:48:09,596 - pdf_analysis.collection_processor - DEBUG - Extracted 116 sections from ./Collection 2/PDFs/Learn Acrobat - Fill and Sign.pdf
+2025-07-28 22:48:09,596 - pdf_analysis.collection_processor - DEBUG - Extracting sections from: ./Collection 2/PDFs/Learn Acrobat - Generative AI_1.pdf
+2025-07-28 22:48:09,840 - pdf_analysis.pdf_analyzer - DEBUG - Extracted 694 text blocks from ./Collection 2/PDFs/Learn Acrobat - Generative AI_1.pdf
+2025-07-28 22:48:09,842 - pdf_analysis.collection_processor - DEBUG - Extracted 120 sections from ./Collection 2/PDFs/Learn Acrobat - Generative AI_1.pdf
+2025-07-28 22:48:09,842 - pdf_analysis.collection_processor - DEBUG - Extracting sections from: ./Collection 2/PDFs/Learn Acrobat - Generative AI_2.pdf
+2025-07-28 22:48:09,944 - pdf_analysis.pdf_analyzer - DEBUG - Extracted 290 text blocks from ./Collection 2/PDFs/Learn Acrobat - Generative AI_2.pdf
+2025-07-28 22:48:09,945 - pdf_analysis.collection_processor - DEBUG - Extracted 60 sections from ./Collection 2/PDFs/Learn Acrobat - Generative AI_2.pdf
+2025-07-28 22:48:09,945 - pdf_analysis.collection_processor - DEBUG - Extracting sections from: ./Collection 2/PDFs/Learn Acrobat - Request e-signatures_1.pdf
+2025-07-28 22:48:10,154 - pdf_analysis.pdf_analyzer - DEBUG - Extracted 1115 text blocks from ./Collection 2/PDFs/Learn Acrobat - Request e-signatures_1.pdf
+2025-07-28 22:48:10,156 - pdf_analysis.collection_processor - DEBUG - Extracted 192 sections from ./Collection 2/PDFs/Learn Acrobat - Request e-signatures_1.pdf
+2025-07-28 22:48:10,156 - pdf_analysis.collection_processor - INFO - Batch 2/3 complete: 506 sections extracted
+2025-07-28 22:48:10,156 - pdf_analysis.collection_processor - INFO - Processing PDF batch 3: 5 files
+2025-07-28 22:48:10,156 - pdf_analysis.collection_processor - DEBUG - Extracting sections from: ./Collection 2/PDFs/Learn Acrobat - Request e-signatures_2.pdf
+2025-07-28 22:48:10,224 - pdf_analysis.pdf_analyzer - DEBUG - Extracted 414 text blocks from ./Collection 2/PDFs/Learn Acrobat - Request e-signatures_2.pdf
+2025-07-28 22:48:10,224 - pdf_analysis.collection_processor - DEBUG - Extracted 72 sections from ./Collection 2/PDFs/Learn Acrobat - Request e-signatures_2.pdf
+2025-07-28 22:48:10,224 - pdf_analysis.collection_processor - DEBUG - Extracting sections from: ./Collection 2/PDFs/Learn Acrobat - Share_1.pdf
+2025-07-28 22:48:10,261 - pdf_analysis.pdf_analyzer - DEBUG - Extracted 407 text blocks from ./Collection 2/PDFs/Learn Acrobat - Share_1.pdf
+2025-07-28 22:48:10,262 - pdf_analysis.collection_processor - DEBUG - Extracted 77 sections from ./Collection 2/PDFs/Learn Acrobat - Share_1.pdf
+2025-07-28 22:48:10,262 - pdf_analysis.collection_processor - DEBUG - Extracting sections from: ./Collection 2/PDFs/Learn Acrobat - Share_2.pdf
+2025-07-28 22:48:10,393 - pdf_analysis.pdf_analyzer - DEBUG - Extracted 463 text blocks from ./Collection 2/PDFs/Learn Acrobat - Share_2.pdf
+2025-07-28 22:48:10,394 - pdf_analysis.collection_processor - DEBUG - Extracted 95 sections from ./Collection 2/PDFs/Learn Acrobat - Share_2.pdf
+2025-07-28 22:48:10,394 - pdf_analysis.collection_processor - DEBUG - Extracting sections from: ./Collection 2/PDFs/Test Your Acrobat Exporting Skills.pdf
+2025-07-28 22:48:10,401 - pdf_analysis.pdf_analyzer - DEBUG - Extracted 75 text blocks from ./Collection 2/PDFs/Test Your Acrobat Exporting Skills.pdf
+2025-07-28 22:48:10,401 - pdf_analysis.collection_processor - DEBUG - Extracted 21 sections from ./Collection 2/PDFs/Test Your Acrobat Exporting Skills.pdf
+2025-07-28 22:48:10,401 - pdf_analysis.collection_processor - DEBUG - Extracting sections from: ./Collection 2/PDFs/The Ultimate PDF Sharing Checklist.pdf
+2025-07-28 22:48:10,405 - pdf_analysis.pdf_analyzer - DEBUG - Extracted 100 text blocks from ./Collection 2/PDFs/The Ultimate PDF Sharing Checklist.pdf
+2025-07-28 22:48:10,405 - pdf_analysis.collection_processor - DEBUG - Extracted 32 sections from ./Collection 2/PDFs/The Ultimate PDF Sharing Checklist.pdf
+2025-07-28 22:48:10,405 - pdf_analysis.collection_processor - INFO - Batch 3/3 complete: 297 sections extracted
+2025-07-28 22:48:10,405 - pdf_analysis.collection_processor - INFO - Total sections extracted: 1902
+2025-07-28 22:48:10,405 - root - INFO - Creating query embedding for: 'HR professional Create and manage fillable forms for onboarding and compliance.'
+2025-07-28 22:48:10,416 - root - INFO - Generating embeddings for 1902 sections
+2025-07-28 22:48:10,416 - root - DEBUG - Processing embedding batch 1/60
+2025-07-28 22:48:11,083 - root - DEBUG - Processing embedding batch 2/60
+2025-07-28 22:48:11,426 - root - DEBUG - Processing embedding batch 3/60
+2025-07-28 22:48:11,810 - root - DEBUG - Processing embedding batch 4/60
+2025-07-28 22:48:12,007 - root - DEBUG - Processing embedding batch 5/60
+2025-07-28 22:48:12,129 - root - DEBUG - Processing embedding batch 6/60
+2025-07-28 22:48:12,357 - root - DEBUG - Processing embedding batch 7/60
+2025-07-28 22:48:12,497 - root - DEBUG - Processing embedding batch 8/60
+2025-07-28 22:48:12,651 - root - DEBUG - Processing embedding batch 9/60
+2025-07-28 22:48:12,824 - root - DEBUG - Processing embedding batch 10/60
+2025-07-28 22:48:13,022 - root - DEBUG - Processing embedding batch 11/60
+2025-07-28 22:48:13,308 - root - DEBUG - Processing embedding batch 12/60
+2025-07-28 22:48:13,463 - root - DEBUG - Processing embedding batch 13/60
+2025-07-28 22:48:13,568 - root - DEBUG - Processing embedding batch 14/60
+2025-07-28 22:48:13,790 - root - DEBUG - Processing embedding batch 15/60
+2025-07-28 22:48:13,938 - root - DEBUG - Processing embedding batch 16/60
+2025-07-28 22:48:14,074 - root - DEBUG - Processing embedding batch 17/60
+2025-07-28 22:48:14,285 - root - DEBUG - Processing embedding batch 18/60
+2025-07-28 22:48:14,409 - root - DEBUG - Processing embedding batch 19/60
+2025-07-28 22:48:15,081 - root - DEBUG - Processing embedding batch 20/60
+2025-07-28 22:48:15,526 - root - DEBUG - Processing embedding batch 21/60
+2025-07-28 22:48:15,944 - root - DEBUG - Processing embedding batch 22/60
+2025-07-28 22:48:16,319 - root - DEBUG - Processing embedding batch 23/60
+2025-07-28 22:48:16,471 - root - DEBUG - Processing embedding batch 24/60
+2025-07-28 22:48:16,785 - root - DEBUG - Processing embedding batch 25/60
+2025-07-28 22:48:16,990 - root - DEBUG - Processing embedding batch 26/60
+2025-07-28 22:48:17,154 - root - DEBUG - Processing embedding batch 27/60
+2025-07-28 22:48:17,643 - root - DEBUG - Processing embedding batch 28/60
+2025-07-28 22:48:17,820 - root - DEBUG - Processing embedding batch 29/60
+2025-07-28 22:48:17,991 - root - DEBUG - Processing embedding batch 30/60
+2025-07-28 22:48:18,056 - root - DEBUG - Processing embedding batch 31/60
+2025-07-28 22:48:18,290 - root - DEBUG - Processing embedding batch 32/60
+2025-07-28 22:48:18,536 - root - DEBUG - Processing embedding batch 33/60
+2025-07-28 22:48:18,761 - root - DEBUG - Processing embedding batch 34/60
+2025-07-28 22:48:19,081 - root - DEBUG - Processing embedding batch 35/60
+2025-07-28 22:48:19,500 - root - DEBUG - Processing embedding batch 36/60
+2025-07-28 22:48:19,812 - root - DEBUG - Processing embedding batch 37/60
+2025-07-28 22:48:19,904 - root - DEBUG - Processing embedding batch 38/60
+2025-07-28 22:48:20,643 - root - DEBUG - Processing embedding batch 39/60
+2025-07-28 22:48:21,299 - root - DEBUG - Processing embedding batch 40/60
+2025-07-28 22:48:21,540 - root - DEBUG - Processing embedding batch 41/60
+2025-07-28 22:48:21,793 - root - DEBUG - Processing embedding batch 42/60
+2025-07-28 22:48:22,103 - root - DEBUG - Processing embedding batch 43/60
+2025-07-28 22:48:22,566 - root - DEBUG - Processing embedding batch 44/60
+2025-07-28 22:48:22,801 - root - DEBUG - Processing embedding batch 45/60
+2025-07-28 22:48:23,289 - root - DEBUG - Processing embedding batch 46/60
+2025-07-28 22:48:23,744 - root - DEBUG - Processing embedding batch 47/60
+2025-07-28 22:48:24,098 - root - DEBUG - Processing embedding batch 48/60
+2025-07-28 22:48:24,447 - root - DEBUG - Processing embedding batch 49/60
+2025-07-28 22:48:24,924 - root - DEBUG - Processing embedding batch 50/60
+2025-07-28 22:48:25,147 - root - DEBUG - Processing embedding batch 51/60
+2025-07-28 22:48:25,467 - root - DEBUG - Processing embedding batch 52/60
+2025-07-28 22:48:25,965 - root - DEBUG - Processing embedding batch 53/60
+2025-07-28 22:48:26,218 - root - DEBUG - Processing embedding batch 54/60
+2025-07-28 22:48:26,655 - root - DEBUG - Processing embedding batch 55/60
+2025-07-28 22:48:26,921 - root - DEBUG - Processing embedding batch 56/60
+2025-07-28 22:48:27,167 - root - DEBUG - Processing embedding batch 57/60
+2025-07-28 22:48:27,730 - root - DEBUG - Processing embedding batch 58/60
+2025-07-28 22:48:28,030 - root - DEBUG - Processing embedding batch 59/60
+2025-07-28 22:48:28,164 - root - DEBUG - Processing embedding batch 60/60
+2025-07-28 22:48:28,192 - root - INFO - Ranked 1902 sections by semantic similarity
+2025-07-28 22:48:28,192 - pdf_analysis.collection_processor - INFO - Ranked 1902 sections by relevance
+2025-07-28 22:48:28,192 - pdf_analysis.collection_processor - INFO - Selected top 10 sections for detailed analysis
+2025-07-28 22:48:28,192 - root - INFO - Starting sentence-level analysis for 10 sections
+2025-07-28 22:48:28,192 - root - DEBUG - Analyzing sentences for section 1/10: Interactive forms
+2025-07-28 22:48:28,213 - root - DEBUG - Processed 1 sentences, selected top 1 for section: Interactive forms
+2025-07-28 22:48:28,213 - root - DEBUG - Analyzing sentences for section 2/10: Prepare a form
+2025-07-28 22:48:28,213 - root - DEBUG - No sentences found in section: Prepare a form
+2025-07-28 22:48:28,213 - root - DEBUG - Analyzing sentences for section 3/10: (Includes Form Fill-in & Save)
+2025-07-28 22:48:28,213 - root - DEBUG - No sentences found in section: (Includes Form Fill-in & Save)
+2025-07-28 22:48:28,213 - root - DEBUG - Analyzing sentences for section 4/10: Flat forms
+2025-07-28 22:48:28,277 - root - DEBUG - Processed 6 sentences, selected top 6 for section: Flat forms
+2025-07-28 22:48:28,277 - root - DEBUG - Analyzing sentences for section 5/10: Forms
+2025-07-28 22:48:28,286 - root - DEBUG - Processed 1 sentences, selected top 1 for section: Forms
+2025-07-28 22:48:28,286 - root - DEBUG - Analyzing sentences for section 6/10: Prepare Forms
+2025-07-28 22:48:28,293 - root - DEBUG - Processed 1 sentences, selected top 1 for section: Prepare Forms
+2025-07-28 22:48:28,293 - root - DEBUG - Analyzing sentences for section 7/10: PDF/A Compliance
+2025-07-28 22:48:28,302 - root - DEBUG - Processed 1 sentences, selected top 1 for section: PDF/A Compliance
+2025-07-28 22:48:28,302 - root - DEBUG - Analyzing sentences for section 8/10: Fill & Sign
+2025-07-28 22:48:28,309 - root - DEBUG - Processed 1 sentences, selected top 1 for section: Fill & Sign
+2025-07-28 22:48:28,309 - root - DEBUG - Analyzing sentences for section 9/10: Certifying and signing documents
+2025-07-28 22:48:28,309 - root - DEBUG - No sentences found in section: Certifying and signing documents
+2025-07-28 22:48:28,309 - root - DEBUG - Analyzing sentences for section 10/10: Forms
+2025-07-28 22:48:28,316 - root - DEBUG - Processed 1 sentences, selected top 1 for section: Forms
+2025-07-28 22:48:28,316 - root - INFO - Completed sentence-level analysis: 7 sections processed successfully
+2025-07-28 22:48:28,316 - pdf_analysis.collection_processor - INFO - Completed sentence analysis for 7 sections
+2025-07-28 22:48:28,326 - pdf_analysis.output_generator - INFO - Output saved successfully: ./Collection 2/challenge1b_output.json (381745 bytes)
+2025-07-28 22:48:28,326 - pdf_analysis.collection_processor - INFO - Output saved to: ./Collection 2/challenge1b_output.json
+2025-07-28 22:48:28,327 - pdf_analysis.collection_processor - INFO - Successfully processed collection ./Collection 2
+2025-07-28 22:48:28,327 - pdf_analysis.collection_processor - INFO -   - Documents processed: 15
+2025-07-28 22:48:28,327 - pdf_analysis.collection_processor - INFO -   - Sections extracted: 1902
+2025-07-28 22:48:28,327 - pdf_analysis.collection_processor - INFO -   - Sections ranked: 1902
+2025-07-28 22:48:28,327 - pdf_analysis.collection_processor - INFO -   - Top sections analyzed: 10
+2025-07-28 22:48:28,327 - pdf_analysis.collection_processor - INFO -   - Sentence analysis results: 7
+2025-07-28 22:48:28,328 - pdf_analysis.collection_processor - INFO - Processing collection: ./Collection 3
+2025-07-28 22:48:28,328 - root - INFO - Loaded input config from ./Collection 3/challenge1b_input.json
+2025-07-28 22:48:28,328 - root - INFO -   - Persona: Food Contractor
+2025-07-28 22:48:28,328 - root - INFO -   - Task: Prepare a vegetarian buffet-style dinner menu for a corporate gathering, including gluten-free items.
+2025-07-28 22:48:28,328 - root - INFO -   - Documents: 9
+2025-07-28 22:48:28,328 - root - INFO - Found 9 PDF files in ./Collection 3/PDFs
+2025-07-28 22:48:28,328 - pdf_analysis.collection_processor - INFO - Processing 9 PDFs in 2 batches
+2025-07-28 22:48:28,328 - pdf_analysis.collection_processor - INFO - Processing PDF batch 1: 5 files
+2025-07-28 22:48:28,328 - pdf_analysis.collection_processor - DEBUG - Extracting sections from: ./Collection 3/PDFs/Breakfast Ideas.pdf
+2025-07-28 22:48:28,358 - pdf_analysis.pdf_analyzer - DEBUG - Extracted 882 text blocks from ./Collection 3/PDFs/Breakfast Ideas.pdf
+2025-07-28 22:48:28,359 - pdf_analysis.collection_processor - DEBUG - Extracted 79 sections from ./Collection 3/PDFs/Breakfast Ideas.pdf
+2025-07-28 22:48:28,360 - pdf_analysis.collection_processor - DEBUG - Extracting sections from: ./Collection 3/PDFs/Dinner Ideas - Mains_1.pdf
+2025-07-28 22:48:28,400 - pdf_analysis.pdf_analyzer - DEBUG - Extracted 987 text blocks from ./Collection 3/PDFs/Dinner Ideas - Mains_1.pdf
+2025-07-28 22:48:28,402 - pdf_analysis.collection_processor - DEBUG - Extracted 49 sections from ./Collection 3/PDFs/Dinner Ideas - Mains_1.pdf
+2025-07-28 22:48:28,402 - pdf_analysis.collection_processor - DEBUG - Extracting sections from: ./Collection 3/PDFs/Dinner Ideas - Mains_2.pdf
+2025-07-28 22:48:28,446 - pdf_analysis.pdf_analyzer - DEBUG - Extracted 1037 text blocks from ./Collection 3/PDFs/Dinner Ideas - Mains_2.pdf
+2025-07-28 22:48:28,448 - pdf_analysis.collection_processor - DEBUG - Extracted 59 sections from ./Collection 3/PDFs/Dinner Ideas - Mains_2.pdf
+2025-07-28 22:48:28,448 - pdf_analysis.collection_processor - DEBUG - Extracting sections from: ./Collection 3/PDFs/Dinner Ideas - Mains_3.pdf
+2025-07-28 22:48:28,470 - pdf_analysis.pdf_analyzer - DEBUG - Extracted 582 text blocks from ./Collection 3/PDFs/Dinner Ideas - Mains_3.pdf
+2025-07-28 22:48:28,471 - pdf_analysis.collection_processor - DEBUG - Extracted 33 sections from ./Collection 3/PDFs/Dinner Ideas - Mains_3.pdf
+2025-07-28 22:48:28,471 - pdf_analysis.collection_processor - DEBUG - Extracting sections from: ./Collection 3/PDFs/Dinner Ideas - Sides_1.pdf
+2025-07-28 22:48:28,537 - pdf_analysis.pdf_analyzer - DEBUG - Extracted 1185 text blocks from ./Collection 3/PDFs/Dinner Ideas - Sides_1.pdf
+2025-07-28 22:48:28,539 - pdf_analysis.collection_processor - DEBUG - Extracted 112 sections from ./Collection 3/PDFs/Dinner Ideas - Sides_1.pdf
+2025-07-28 22:48:28,540 - pdf_analysis.collection_processor - INFO - Batch 1/2 complete: 332 sections extracted
+2025-07-28 22:48:28,540 - pdf_analysis.collection_processor - INFO - Processing PDF batch 2: 4 files
+2025-07-28 22:48:28,540 - pdf_analysis.collection_processor - DEBUG - Extracting sections from: ./Collection 3/PDFs/Dinner Ideas - Sides_2.pdf
+2025-07-28 22:48:28,616 - pdf_analysis.pdf_analyzer - DEBUG - Extracted 1269 text blocks from ./Collection 3/PDFs/Dinner Ideas - Sides_2.pdf
+2025-07-28 22:48:28,619 - pdf_analysis.collection_processor - DEBUG - Extracted 120 sections from ./Collection 3/PDFs/Dinner Ideas - Sides_2.pdf
+2025-07-28 22:48:28,619 - pdf_analysis.collection_processor - DEBUG - Extracting sections from: ./Collection 3/PDFs/Dinner Ideas - Sides_3.pdf
+2025-07-28 22:48:28,692 - pdf_analysis.pdf_analyzer - DEBUG - Extracted 1263 text blocks from ./Collection 3/PDFs/Dinner Ideas - Sides_3.pdf
+2025-07-28 22:48:28,695 - pdf_analysis.collection_processor - DEBUG - Extracted 117 sections from ./Collection 3/PDFs/Dinner Ideas - Sides_3.pdf
+2025-07-28 22:48:28,695 - pdf_analysis.collection_processor - DEBUG - Extracting sections from: ./Collection 3/PDFs/Dinner Ideas - Sides_4.pdf
+2025-07-28 22:48:28,768 - pdf_analysis.pdf_analyzer - DEBUG - Extracted 1258 text blocks from ./Collection 3/PDFs/Dinner Ideas - Sides_4.pdf
+2025-07-28 22:48:28,770 - pdf_analysis.collection_processor - DEBUG - Extracted 121 sections from ./Collection 3/PDFs/Dinner Ideas - Sides_4.pdf
+2025-07-28 22:48:28,770 - pdf_analysis.collection_processor - DEBUG - Extracting sections from: ./Collection 3/PDFs/Lunch Ideas.pdf
+2025-07-28 22:48:28,797 - pdf_analysis.pdf_analyzer - DEBUG - Extracted 849 text blocks from ./Collection 3/PDFs/Lunch Ideas.pdf
+2025-07-28 22:48:28,798 - pdf_analysis.collection_processor - DEBUG - Extracted 76 sections from ./Collection 3/PDFs/Lunch Ideas.pdf
+2025-07-28 22:48:28,798 - pdf_analysis.collection_processor - INFO - Batch 2/2 complete: 434 sections extracted
+2025-07-28 22:48:28,798 - pdf_analysis.collection_processor - INFO - Total sections extracted: 766
+2025-07-28 22:48:28,798 - root - INFO - Creating query embedding for: 'Food Contractor Prepare a vegetarian buffet-style dinner menu for a corporate gathering, including gluten-free items.'
+2025-07-28 22:48:28,807 - root - INFO - Generating embeddings for 766 sections
+2025-07-28 22:48:28,808 - root - DEBUG - Processing embedding batch 1/24
+2025-07-28 22:48:29,169 - root - DEBUG - Processing embedding batch 2/24
+2025-07-28 22:48:29,461 - root - DEBUG - Processing embedding batch 3/24
+2025-07-28 22:48:29,816 - root - DEBUG - Processing embedding batch 4/24
+2025-07-28 22:48:30,213 - root - DEBUG - Processing embedding batch 5/24
+2025-07-28 22:48:30,449 - root - DEBUG - Processing embedding batch 6/24
+2025-07-28 22:48:30,770 - root - DEBUG - Processing embedding batch 7/24
+2025-07-28 22:48:31,137 - root - DEBUG - Processing embedding batch 8/24
+2025-07-28 22:48:31,332 - root - DEBUG - Processing embedding batch 9/24
+2025-07-28 22:48:31,543 - root - DEBUG - Processing embedding batch 10/24
+2025-07-28 22:48:31,707 - root - DEBUG - Processing embedding batch 11/24
+2025-07-28 22:48:31,938 - root - DEBUG - Processing embedding batch 12/24
+2025-07-28 22:48:32,157 - root - DEBUG - Processing embedding batch 13/24
+2025-07-28 22:48:32,342 - root - DEBUG - Processing embedding batch 14/24
+2025-07-28 22:48:32,551 - root - DEBUG - Processing embedding batch 15/24
+2025-07-28 22:48:32,719 - root - DEBUG - Processing embedding batch 16/24
+2025-07-28 22:48:32,943 - root - DEBUG - Processing embedding batch 17/24
+2025-07-28 22:48:33,157 - root - DEBUG - Processing embedding batch 18/24
+2025-07-28 22:48:33,345 - root - DEBUG - Processing embedding batch 19/24
+2025-07-28 22:48:33,509 - root - DEBUG - Processing embedding batch 20/24
+2025-07-28 22:48:33,760 - root - DEBUG - Processing embedding batch 21/24
+2025-07-28 22:48:33,960 - root - DEBUG - Processing embedding batch 22/24
+2025-07-28 22:48:34,153 - root - DEBUG - Processing embedding batch 23/24
+2025-07-28 22:48:34,333 - root - DEBUG - Processing embedding batch 24/24
+2025-07-28 22:48:34,536 - root - INFO - Ranked 766 sections by semantic similarity
+2025-07-28 22:48:34,536 - pdf_analysis.collection_processor - INFO - Ranked 766 sections by relevance
+2025-07-28 22:48:34,536 - pdf_analysis.collection_processor - INFO - Selected top 10 sections for detailed analysis
+2025-07-28 22:48:34,536 - root - INFO - Starting sentence-level analysis for 10 sections
+2025-07-28 22:48:34,536 - root - DEBUG - Analyzing sentences for section 1/10: Instructions
+2025-07-28 22:48:34,546 - root - DEBUG - Processed 1 sentences, selected top 1 for section: Instructions
+2025-07-28 22:48:34,546 - root - DEBUG - Analyzing sentences for section 2/10: Ingredients:
+2025-07-28 22:48:34,556 - root - DEBUG - Processed 1 sentences, selected top 1 for section: Ingredients:
+2025-07-28 22:48:34,556 - root - DEBUG - Analyzing sentences for section 3/10: Ingredients:
+2025-07-28 22:48:34,564 - root - DEBUG - Processed 1 sentences, selected top 1 for section: Ingredients:
+2025-07-28 22:48:34,564 - root - DEBUG - Analyzing sentences for section 4/10: Instructions
+2025-07-28 22:48:34,573 - root - DEBUG - Processed 1 sentences, selected top 1 for section: Instructions
+2025-07-28 22:48:34,573 - root - DEBUG - Analyzing sentences for section 5/10: Ingredients:
+2025-07-28 22:48:34,582 - root - DEBUG - Processed 1 sentences, selected top 1 for section: Ingredients:
+2025-07-28 22:48:34,582 - root - DEBUG - Analyzing sentences for section 6/10: Ingredients:
+2025-07-28 22:48:34,591 - root - DEBUG - Processed 1 sentences, selected top 1 for section: Ingredients:
+2025-07-28 22:48:34,592 - root - DEBUG - Analyzing sentences for section 7/10: Instructions
+2025-07-28 22:48:34,612 - root - DEBUG - Processed 1 sentences, selected top 1 for section: Instructions
+2025-07-28 22:48:34,613 - root - DEBUG - Analyzing sentences for section 8/10: Ingredients:
+2025-07-28 22:48:34,631 - root - DEBUG - Processed 1 sentences, selected top 1 for section: Ingredients:
+2025-07-28 22:48:34,631 - root - DEBUG - Analyzing sentences for section 9/10: Ingredients:
+2025-07-28 22:48:34,640 - root - DEBUG - Processed 1 sentences, selected top 1 for section: Ingredients:
+2025-07-28 22:48:34,640 - root - DEBUG - Analyzing sentences for section 10/10: Ingredients:
+2025-07-28 22:48:34,647 - root - DEBUG - Processed 1 sentences, selected top 1 for section: Ingredients:
+2025-07-28 22:48:34,647 - root - INFO - Completed sentence-level analysis: 10 sections processed successfully
+2025-07-28 22:48:34,647 - pdf_analysis.collection_processor - INFO - Completed sentence analysis for 10 sections
+2025-07-28 22:48:34,651 - pdf_analysis.output_generator - INFO - Output saved successfully: ./Collection 3/challenge1b_output.json (145113 bytes)
+2025-07-28 22:48:34,651 - pdf_analysis.collection_processor - INFO - Output saved to: ./Collection 3/challenge1b_output.json
+2025-07-28 22:48:34,651 - pdf_analysis.collection_processor - INFO - Successfully processed collection ./Collection 3
+2025-07-28 22:48:34,651 - pdf_analysis.collection_processor - INFO -   - Documents processed: 9
+2025-07-28 22:48:34,651 - pdf_analysis.collection_processor - INFO -   - Sections extracted: 766
+2025-07-28 22:48:34,651 - pdf_analysis.collection_processor - INFO -   - Sections ranked: 766
+2025-07-28 22:48:34,651 - pdf_analysis.collection_processor - INFO -   - Top sections analyzed: 10
+2025-07-28 22:48:34,651 - pdf_analysis.collection_processor - INFO -   - Sentence analysis results: 10
+2025-07-28 22:48:34,652 - root - INFO - Collection processing complete: 3/3 collections processed successfully
+2025-07-28 22:48:34,652 - root - INFO - ============================================================
+2025-07-28 22:48:34,652 - root - INFO - PROCESSING SUMMARY
+2025-07-28 22:48:34,652 - root - INFO - ============================================================
+2025-07-28 22:48:34,652 - root - INFO - Total collections found: 3
+2025-07-28 22:48:34,652 - root - INFO - Successfully processed: 3
+2025-07-28 22:48:34,652 - root - INFO - Failed to process: 0
+2025-07-28 22:48:34,652 - root - INFO - Total documents processed: 31
+2025-07-28 22:48:34,652 - root - INFO - Total sections extracted: 3025
+2025-07-28 22:48:34,652 - root - INFO - 
+Successful collections:
+2025-07-28 22:48:34,652 - root - INFO -   ✓ ./Collection 1 - 7 docs, 357 sections
+2025-07-28 22:48:34,652 - root - INFO -   ✓ ./Collection 2 - 15 docs, 1902 sections
+2025-07-28 22:48:34,652 - root - INFO -   ✓ ./Collection 3 - 9 docs, 766 sections
+2025-07-28 22:48:34,652 - root - INFO - 
+Total processing time: 33.47 seconds
+2025-07-28 22:48:34,652 - root - INFO - Average time per document: 1.08 seconds
+2025-07-28 22:48:34,652 - root - INFO - All collections processed successfully!
+2025-07-28 22:49:05,169 - root - INFO - ============================================================
+2025-07-28 22:49:05,169 - root - INFO - PDF Analysis System - Starting
+2025-07-28 22:49:05,169 - root - INFO - ============================================================
+2025-07-28 22:49:05,169 - root - INFO - System requirements check passed
+2025-07-28 22:49:05,169 - root - INFO - Performance optimizations applied
+2025-07-28 22:49:05,169 - root - INFO - Collection processor initialized successfully
+2025-07-28 22:49:05,170 - root - INFO - Starting collection discovery in: /nonexistent
+2025-07-28 22:49:05,170 - root - INFO - Starting collection processing
+2025-07-28 22:49:05,170 - root - ERROR - Error discovering collections in /nonexistent: [Errno 2] No such file or directory: '/nonexistent'
+2025-07-28 22:49:05,170 - root - CRITICAL - Critical error in collection processing: Failed to discover collections: [Errno 2] No such file or directory: '/nonexistent'
+2025-07-28 22:49:05,170 - root - CRITICAL - Error type: RuntimeError
+2025-07-28 22:49:05,170 - root - CRITICAL - Traceback:
+Traceback (most recent call last):
+  File "/home/himanshu/adobe-hack/Challenge_1b/src/pdf_analysis/collection_processor.py", line 52, in discover_collections
+    for item in os.listdir(base_path):
+                ^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/nonexistent'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/himanshu/adobe-hack/Challenge_1b/main.py", line 163, in main
+    results = processor.process_all_collections(base_path)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/himanshu/adobe-hack/Challenge_1b/src/pdf_analysis/collection_processor.py", line 295, in process_all_collections
+    collection_paths = self.discover_collections(base_path)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/himanshu/adobe-hack/Challenge_1b/src/pdf_analysis/collection_processor.py", line 64, in discover_collections
+    raise RuntimeError(f"Failed to discover collections: {e}")
+RuntimeError: Failed to discover collections: [Errno 2] No such file or directory: '/nonexistent'
+
+2025-07-28 22:49:05,170 - root - CRITICAL - An unexpected error occurred. Check the logs for details.
+2025-07-28 23:13:04,884 - root - INFO - ============================================================
+2025-07-28 23:13:04,884 - root - INFO - PDF Analysis System - Starting
+2025-07-28 23:13:04,884 - root - INFO - ============================================================
+2025-07-28 23:13:04,884 - root - INFO - System requirements check passed
+2025-07-28 23:13:04,885 - root - INFO - Performance optimizations applied
+2025-07-28 23:13:04,885 - root - INFO - Collection processor initialized successfully
+2025-07-28 23:13:04,885 - root - INFO - Starting collection discovery in: .
+2025-07-28 23:13:04,885 - root - INFO - Starting collection processing
+2025-07-28 23:13:04,885 - root - INFO - Discovered 3 collections: ['./Collection 1', './Collection 2', './Collection 3']
+2025-07-28 23:13:04,885 - pdf_analysis.collection_processor - INFO - Processing collection: ./Collection 1
+2025-07-28 23:13:04,885 - root - INFO - Loaded input config from ./Collection 1/challenge1b_input.json
+2025-07-28 23:13:04,885 - root - INFO -   - Persona: Travel Planner
+2025-07-28 23:13:04,885 - root - INFO -   - Task: Plan a trip of 4 days for a group of 10 college friends.
+2025-07-28 23:13:04,885 - root - INFO -   - Documents: 7
+2025-07-28 23:13:04,885 - root - INFO - Found 7 PDF files in ./Collection 1/PDFs
+2025-07-28 23:13:04,885 - pdf_analysis.collection_processor - INFO - Processing 7 PDFs in 2 batches
+2025-07-28 23:13:04,885 - pdf_analysis.collection_processor - INFO - Processing PDF batch 1: 5 files
+2025-07-28 23:13:04,951 - pdf_analysis.collection_processor - INFO - Batch 1/2 complete: 232 sections extracted
+2025-07-28 23:13:04,952 - pdf_analysis.collection_processor - INFO - Processing PDF batch 2: 2 files
+2025-07-28 23:13:04,969 - pdf_analysis.collection_processor - INFO - Batch 2/2 complete: 125 sections extracted
+2025-07-28 23:13:04,969 - pdf_analysis.collection_processor - INFO - Total sections extracted: 357
+2025-07-28 23:13:04,969 - root - INFO - Loading sentence transformer model: all-MiniLM-L6-v2
+2025-07-28 23:13:09,102 - root - INFO - Model loaded successfully. Embedding dimension: 384
+2025-07-28 23:13:09,102 - root - INFO - Creating query embedding for: 'Travel Planner Plan a trip of 4 days for a group of 10 college friends.'
+2025-07-28 23:13:09,113 - root - INFO - Generating embeddings for 357 sections
+2025-07-28 23:13:13,012 - root - INFO - Ranked 357 sections by semantic similarity
+2025-07-28 23:13:13,014 - pdf_analysis.collection_processor - INFO - Ranked 357 sections by relevance
+2025-07-28 23:13:13,014 - pdf_analysis.collection_processor - INFO - Selected top 10 sections for detailed analysis
+2025-07-28 23:13:13,014 - root - INFO - Starting sentence-level analysis for 10 sections
+2025-07-28 23:13:13,054 - root - INFO - Completed sentence-level analysis: 6 sections processed successfully
+2025-07-28 23:13:13,054 - pdf_analysis.collection_processor - INFO - Completed sentence analysis for 6 sections
+2025-07-28 23:13:13,056 - pdf_analysis.output_generator - INFO - Output saved successfully: ./Collection 1/challenge1b_output.json (72770 bytes)
+2025-07-28 23:13:13,056 - pdf_analysis.collection_processor - INFO - Output saved to: ./Collection 1/challenge1b_output.json
+2025-07-28 23:13:13,056 - pdf_analysis.collection_processor - INFO - Successfully processed collection ./Collection 1
+2025-07-28 23:13:13,056 - pdf_analysis.collection_processor - INFO -   - Documents processed: 7
+2025-07-28 23:13:13,056 - pdf_analysis.collection_processor - INFO -   - Sections extracted: 357
+2025-07-28 23:13:13,056 - pdf_analysis.collection_processor - INFO -   - Sections ranked: 357
+2025-07-28 23:13:13,056 - pdf_analysis.collection_processor - INFO -   - Top sections analyzed: 10
+2025-07-28 23:13:13,056 - pdf_analysis.collection_processor - INFO -   - Sentence analysis results: 6
+2025-07-28 23:13:13,057 - pdf_analysis.collection_processor - INFO - Processing collection: ./Collection 2
+2025-07-28 23:13:13,057 - root - INFO - Loaded input config from ./Collection 2/challenge1b_input.json
+2025-07-28 23:13:13,057 - root - INFO -   - Persona: HR professional
+2025-07-28 23:13:13,057 - root - INFO -   - Task: Create and manage fillable forms for onboarding and compliance.
+2025-07-28 23:13:13,057 - root - INFO -   - Documents: 15
+2025-07-28 23:13:13,057 - root - INFO - Found 15 PDF files in ./Collection 2/PDFs
+2025-07-28 23:13:13,057 - pdf_analysis.collection_processor - INFO - Processing 15 PDFs in 3 batches
+2025-07-28 23:13:13,057 - pdf_analysis.collection_processor - INFO - Processing PDF batch 1: 5 files
+2025-07-28 23:13:13,435 - pdf_analysis.collection_processor - INFO - Batch 1/3 complete: 1099 sections extracted
+2025-07-28 23:13:13,435 - pdf_analysis.collection_processor - INFO - Processing PDF batch 2: 5 files
+2025-07-28 23:13:14,161 - pdf_analysis.collection_processor - INFO - Batch 2/3 complete: 506 sections extracted
+2025-07-28 23:13:14,161 - pdf_analysis.collection_processor - INFO - Processing PDF batch 3: 5 files
+2025-07-28 23:13:14,414 - pdf_analysis.collection_processor - INFO - Batch 3/3 complete: 297 sections extracted
+2025-07-28 23:13:14,414 - pdf_analysis.collection_processor - INFO - Total sections extracted: 1902
+2025-07-28 23:13:14,414 - root - INFO - Creating query embedding for: 'HR professional Create and manage fillable forms for onboarding and compliance.'
+2025-07-28 23:13:14,421 - root - INFO - Generating embeddings for 1902 sections
+2025-07-28 23:13:31,566 - root - INFO - Ranked 1902 sections by semantic similarity
+2025-07-28 23:13:31,568 - pdf_analysis.collection_processor - INFO - Ranked 1902 sections by relevance
+2025-07-28 23:13:31,569 - pdf_analysis.collection_processor - INFO - Selected top 10 sections for detailed analysis
+2025-07-28 23:13:31,569 - root - INFO - Starting sentence-level analysis for 10 sections
+2025-07-28 23:13:31,670 - root - INFO - Completed sentence-level analysis: 7 sections processed successfully
+2025-07-28 23:13:31,670 - pdf_analysis.collection_processor - INFO - Completed sentence analysis for 7 sections
+2025-07-28 23:13:31,684 - pdf_analysis.output_generator - INFO - Output saved successfully: ./Collection 2/challenge1b_output.json (381745 bytes)
+2025-07-28 23:13:31,684 - pdf_analysis.collection_processor - INFO - Output saved to: ./Collection 2/challenge1b_output.json
+2025-07-28 23:13:31,684 - pdf_analysis.collection_processor - INFO - Successfully processed collection ./Collection 2
+2025-07-28 23:13:31,684 - pdf_analysis.collection_processor - INFO -   - Documents processed: 15
+2025-07-28 23:13:31,684 - pdf_analysis.collection_processor - INFO -   - Sections extracted: 1902
+2025-07-28 23:13:31,684 - pdf_analysis.collection_processor - INFO -   - Sections ranked: 1902
+2025-07-28 23:13:31,684 - pdf_analysis.collection_processor - INFO -   - Top sections analyzed: 10
+2025-07-28 23:13:31,684 - pdf_analysis.collection_processor - INFO -   - Sentence analysis results: 7
+2025-07-28 23:13:31,685 - pdf_analysis.collection_processor - INFO - Processing collection: ./Collection 3
+2025-07-28 23:13:31,685 - root - INFO - Loaded input config from ./Collection 3/challenge1b_input.json
+2025-07-28 23:13:31,685 - root - INFO -   - Persona: Food Contractor
+2025-07-28 23:13:31,685 - root - INFO -   - Task: Prepare a vegetarian buffet-style dinner menu for a corporate gathering, including gluten-free items.
+2025-07-28 23:13:31,685 - root - INFO -   - Documents: 9
+2025-07-28 23:13:31,685 - root - INFO - Found 9 PDF files in ./Collection 3/PDFs
+2025-07-28 23:13:31,685 - pdf_analysis.collection_processor - INFO - Processing 9 PDFs in 2 batches
+2025-07-28 23:13:31,685 - pdf_analysis.collection_processor - INFO - Processing PDF batch 1: 5 files
+2025-07-28 23:13:31,903 - pdf_analysis.collection_processor - INFO - Batch 1/2 complete: 332 sections extracted
+2025-07-28 23:13:31,903 - pdf_analysis.collection_processor - INFO - Processing PDF batch 2: 4 files
+2025-07-28 23:13:32,158 - pdf_analysis.collection_processor - INFO - Batch 2/2 complete: 434 sections extracted
+2025-07-28 23:13:32,158 - pdf_analysis.collection_processor - INFO - Total sections extracted: 766
+2025-07-28 23:13:32,158 - root - INFO - Creating query embedding for: 'Food Contractor Prepare a vegetarian buffet-style dinner menu for a corporate gathering, including gluten-free items.'
+2025-07-28 23:13:32,178 - root - INFO - Generating embeddings for 766 sections
+2025-07-28 23:13:37,659 - root - INFO - Ranked 766 sections by semantic similarity
+2025-07-28 23:13:37,659 - pdf_analysis.collection_processor - INFO - Ranked 766 sections by relevance
+2025-07-28 23:13:37,660 - pdf_analysis.collection_processor - INFO - Selected top 10 sections for detailed analysis
+2025-07-28 23:13:37,660 - root - INFO - Starting sentence-level analysis for 10 sections
+2025-07-28 23:13:37,747 - root - INFO - Completed sentence-level analysis: 10 sections processed successfully
+2025-07-28 23:13:37,747 - pdf_analysis.collection_processor - INFO - Completed sentence analysis for 10 sections
+2025-07-28 23:13:37,751 - pdf_analysis.output_generator - INFO - Output saved successfully: ./Collection 3/challenge1b_output.json (145113 bytes)
+2025-07-28 23:13:37,751 - pdf_analysis.collection_processor - INFO - Output saved to: ./Collection 3/challenge1b_output.json
+2025-07-28 23:13:37,751 - pdf_analysis.collection_processor - INFO - Successfully processed collection ./Collection 3
+2025-07-28 23:13:37,751 - pdf_analysis.collection_processor - INFO -   - Documents processed: 9
+2025-07-28 23:13:37,751 - pdf_analysis.collection_processor - INFO -   - Sections extracted: 766
+2025-07-28 23:13:37,751 - pdf_analysis.collection_processor - INFO -   - Sections ranked: 766
+2025-07-28 23:13:37,751 - pdf_analysis.collection_processor - INFO -   - Top sections analyzed: 10
+2025-07-28 23:13:37,751 - pdf_analysis.collection_processor - INFO -   - Sentence analysis results: 10
+2025-07-28 23:13:37,751 - root - INFO - Collection processing complete: 3/3 collections processed successfully
+2025-07-28 23:13:37,751 - root - INFO - ============================================================
+2025-07-28 23:13:37,751 - root - INFO - PROCESSING SUMMARY
+2025-07-28 23:13:37,751 - root - INFO - ============================================================
+2025-07-28 23:13:37,751 - root - INFO - Total collections found: 3
+2025-07-28 23:13:37,751 - root - INFO - Successfully processed: 3
+2025-07-28 23:13:37,751 - root - INFO - Failed to process: 0
+2025-07-28 23:13:37,751 - root - INFO - Total documents processed: 31
+2025-07-28 23:13:37,751 - root - INFO - Total sections extracted: 3025
+2025-07-28 23:13:37,751 - root - INFO - 
+Successful collections:
+2025-07-28 23:13:37,751 - root - INFO -   ✓ ./Collection 1 - 7 docs, 357 sections
+2025-07-28 23:13:37,751 - root - INFO -   ✓ ./Collection 2 - 15 docs, 1902 sections
+2025-07-28 23:13:37,751 - root - INFO -   ✓ ./Collection 3 - 9 docs, 766 sections
+2025-07-28 23:13:37,751 - root - INFO - 
+Total processing time: 32.87 seconds
+2025-07-28 23:13:37,751 - root - INFO - Average time per document: 1.06 seconds
+2025-07-28 23:13:37,751 - root - INFO - All collections processed successfully!

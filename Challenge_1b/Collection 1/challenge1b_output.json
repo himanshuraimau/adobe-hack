@@ -11,65 +11,2182 @@
         ],
         "persona": "Travel Planner",
         "job_to_be_done": "Plan a trip of 4 days for a group of 10 college friends.",
-        "processing_timestamp": "2025-07-10T15:31:22.632389"
+        "processing_timestamp": "2025-07-28T18:30:01.727968"
     },
     "extracted_sections": [
         {
-            "document": "South of France - Cities.pdf",
-            "section_title": "Comprehensive Guide to Major Cities in the South of France",
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Pack a Day Bag:",
             "importance_rank": 1,
-            "page_number": 1
+            "page_number": 8
         },
         {
-            "document": "South of France - Things to Do.pdf",
-            "section_title": "Coastal Adventures",
+            "document": "South of France - Cities.pdf",
+            "section_title": "Travel Tips",
             "importance_rank": 2,
             "page_number": 2
         },
         {
-            "document": "South of France - Cuisine.pdf",
-            "section_title": "Culinary Experiences",
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Snacks:",
             "importance_rank": 3,
             "page_number": 6
         },
         {
             "document": "South of France - Tips and Tricks.pdf",
-            "section_title": "General Packing Tips and Tricks",
+            "section_title": "Beach Trips",
             "importance_rank": 4,
-            "page_number": 2
+            "page_number": 7
         },
         {
-            "document": "South of France - Things to Do.pdf",
-            "section_title": "Nightlife and Entertainment",
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Wine Tours",
             "importance_rank": 5,
-            "page_number": 11
-        }
-    ],
-    "subsection_analysis": [
+            "page_number": 7
+        },
         {
-            "document": "South of France - Things to Do.pdf",
-            "refined_text": "The South of France is renowned for its beautiful coastline along the Mediterranean Sea. Here are some activities to enjoy by the sea: Beach Hopping: Nice - Visit the sandy shores and enjoy the vibrant Promenade des Anglais; Antibes - Relax on the pebbled beaches and explore the charming old town; Saint-Tropez - Experience the exclusive beach clubs and glamorous atmosphere; Marseille to Cassis - Explore the stunning limestone cliffs and hidden coves of Calanques National Park; Îles d'Hyères - Discover pristine beaches and excellent snorkeling opportunities on islands like Porquerolles and Port-Cros; Cannes - Enjoy the sandy beaches and luxury beach clubs along the Boulevard de la Croisette; Menton - Visit the serene beaches and beautiful gardens in this charming town near the Italian border.",
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Additional Tips:",
+            "importance_rank": 6,
+            "page_number": 8
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Tips and Tricks for Packing",
+            "importance_rank": 7,
+            "page_number": 8
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Conclusion",
+            "importance_rank": 8,
+            "page_number": 9
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Additional Tips:",
+            "importance_rank": 9,
+            "page_number": 8
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Leave Room for Souvenirs:",
+            "importance_rank": 10,
+            "page_number": 8
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Makeup:",
+            "importance_rank": 11,
+            "page_number": 4
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Day Bag:",
+            "importance_rank": 12,
+            "page_number": 7
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Additional Tips:",
+            "importance_rank": 13,
+            "page_number": 5
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Introduction",
+            "importance_rank": 14,
+            "page_number": 1
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Use Packing Cubes:",
+            "importance_rank": 15,
+            "page_number": 8
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Hiking and Outdoor Activities",
+            "importance_rank": 16,
+            "page_number": 7
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Books and Entertainment:",
+            "importance_rank": 17,
+            "page_number": 4
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "General Packing Tips and Tricks",
+            "importance_rank": 18,
             "page_number": 2
         },
         {
-            "document": "South of France - Cuisine.pdf",
-            "refined_text": "In addition to dining at top restaurants, there are several culinary experiences you should consider: Cooking Classes - Many towns and cities in the South of France offer cooking classes where you can learn to prepare traditional dishes like bouillabaisse, ratatouille, and tarte tropézienne. These classes are a great way to immerse yourself in the local culture and gain hands-on experience with regional recipes. Some classes even include a visit to a local market to shop for fresh ingredients. Wine Tours - The South of France is renowned for its wine regions, including Provence and Languedoc. Take a wine tour to visit vineyards, taste local wines, and learn about the winemaking process. Many wineries offer guided tours and tastings, giving you the opportunity to sample a variety of wines and discover new favorites.",
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Bordeaux",
+            "importance_rank": 19,
+            "page_number": 5
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Additional Tips:",
+            "importance_rank": 20,
+            "page_number": 7
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Travel-Sized Toiletries:",
+            "importance_rank": 21,
+            "page_number": 2
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Promenade des Anglais",
+            "importance_rank": 22,
+            "page_number": 5
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Additional Tips:",
+            "importance_rank": 23,
             "page_number": 6
         },
         {
-            "document": "South of France - Things to Do.pdf",
-            "refined_text": "The South of France offers a vibrant nightlife scene, with options ranging from chic bars to lively nightclubs: Bars and Lounges - Monaco: Enjoy classic cocktails and live jazz at Le Bar Americain, located in the Hôtel de Paris; Nice: Try creative cocktails at Le Comptoir du Marché, a trendy bar in the old town; Cannes: Experience dining and entertainment at La Folie Douce, with live music, DJs, and performances; Marseille: Visit Le Trolleybus, a popular bar with multiple rooms and music styles; Saint-Tropez: Relax at Bar du Port, known for its chic atmosphere and waterfront views. Nightclubs - Saint-Tropez: Dance at the famous Les Caves du Roy, known for its glamorous atmosphere and celebrity clientele; Nice: Party at High Club on the Promenade des Anglais, featuring multiple dance floors and top DJs; Cannes: Enjoy the stylish setting and rooftop terrace at La Suite, offering stunning views of Cannes.",
-            "page_number": 11
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Additional Tips:",
+            "importance_rank": 24,
+            "page_number": 6
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Make a Packing List:",
+            "importance_rank": 25,
+            "page_number": 8
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Additional Tips:",
+            "importance_rank": 26,
+            "page_number": 7
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Boat Trip to the Calanques",
+            "importance_rank": 27,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - Restaurants and Hotels.pdf",
+            "section_title": "Family-Friendly Hotels",
+            "importance_rank": 28,
+            "page_number": 9
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "City Exploration",
+            "importance_rank": 29,
+            "page_number": 7
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Aerospace Industry",
+            "importance_rank": 30,
+            "page_number": 9
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Cultural Activities",
+            "importance_rank": 31,
+            "page_number": 7
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Electronics:",
+            "importance_rank": 32,
+            "page_number": 4
         },
         {
             "document": "South of France - Things to Do.pdf",
-            "refined_text": "Water Sports: Cannes, Nice, and Saint-Tropez - Try jet skiing or parasailing for a thrill; Toulon - Dive into the underwater world with scuba diving excursions to explore wrecks; Cerbère-Banyuls - Visit the marine reserve for an unforgettable diving experience; Mediterranean Coast - Charter a yacht or join a sailing tour to explore the coastline and nearby islands; Marseille - Go windsurfing or kitesurfing in the windy bays; Port Grimaud - Rent a paddleboard and explore the canals of this picturesque village; La Ciotat - Try snorkeling in the clear waters around the Île Verte.",
+            "section_title": "Educational Experiences",
+            "importance_rank": 33,
+            "page_number": 9
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Portable Laundry Kit:",
+            "importance_rank": 34,
+            "page_number": 2
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Language",
+            "importance_rank": 35,
             "page_number": 2
         },
         {
             "document": "South of France - Tips and Tricks.pdf",
-            "refined_text": "General Packing Tips and Tricks: Layering - The weather can vary, so pack layers to stay comfortable in different temperatures; Versatile Clothing - Choose items that can be mixed and matched to create multiple outfits, helping you pack lighter; Packing Cubes - Use packing cubes to organize your clothes and maximize suitcase space; Roll Your Clothes - Rolling clothes saves space and reduces wrinkles; Travel-Sized Toiletries - Bring travel-sized toiletries to save space and comply with airline regulations; Reusable Bags - Pack a few reusable bags for laundry, shoes, or shopping; First Aid Kit - Include a small first aid kit with band-aids, antiseptic wipes, and any necessary medications; Copies of Important Documents - Make copies of your passport, travel insurance, and other important documents. Keep them separate from the originals.",
+            "section_title": "Additional Tips:",
+            "importance_rank": 36,
+            "page_number": 7
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Mediterranean Coast",
+            "importance_rank": 37,
             "page_number": 2
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Outdoor Adventures",
+            "importance_rank": 38,
+            "page_number": 9
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Transportation",
+            "importance_rank": 39,
+            "page_number": 2
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Student Life",
+            "importance_rank": 40,
+            "page_number": 10
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Gorges du Tarn",
+            "importance_rank": 41,
+            "page_number": 4
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Cooking Classes",
+            "importance_rank": 42,
+            "page_number": 5
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Comfortable Shoes:",
+            "importance_rank": 43,
+            "page_number": 7
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Additional Tips:",
+            "importance_rank": 44,
+            "page_number": 4
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Wear Bulky Items:",
+            "importance_rank": 45,
+            "page_number": 8
+        },
+        {
+            "document": "South of France - History.pdf",
+            "section_title": "Promenade des Anglais",
+            "importance_rank": 46,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Additional Tips:",
+            "importance_rank": 47,
+            "page_number": 4
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Hiking and Biking",
+            "importance_rank": 48,
+            "page_number": 4
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Beach Hopping",
+            "importance_rank": 49,
+            "page_number": 2
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Additional Tips:",
+            "importance_rank": 50,
+            "page_number": 6
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Spa and Wellness Retreats",
+            "importance_rank": 51,
+            "page_number": 7
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Montpellier: A University City with Medieval Charm",
+            "importance_rank": 52,
+            "page_number": 10
+        },
+        {
+            "document": "South of France - Restaurants and Hotels.pdf",
+            "section_title": "Budget-Friendly Hotels",
+            "importance_rank": 53,
+            "page_number": 8
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Pyrenees",
+            "importance_rank": 54,
+            "page_number": 7
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Artistic Heritage",
+            "importance_rank": 55,
+            "page_number": 8
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Travel Pillow and Blanket:",
+            "importance_rank": 56,
+            "page_number": 2
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Packing Cubes:",
+            "importance_rank": 57,
+            "page_number": 2
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Cannes, Nice, and Saint-Tropez",
+            "importance_rank": 58,
+            "page_number": 2
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Backpack:",
+            "importance_rank": 59,
+            "page_number": 7
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Provence",
+            "importance_rank": 60,
+            "page_number": 7
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Reusable Bags:",
+            "importance_rank": 61,
+            "page_number": 2
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Côte d'Azur",
+            "importance_rank": 62,
+            "page_number": 7
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Local Experiences",
+            "importance_rank": 63,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Périgord",
+            "importance_rank": 64,
+            "page_number": 5
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Guidebook:",
+            "importance_rank": 65,
+            "page_number": 7
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Additional Tips:",
+            "importance_rank": 66,
+            "page_number": 7
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Cannes",
+            "importance_rank": 67,
+            "page_number": 2
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Evening Wear:",
+            "importance_rank": 68,
+            "page_number": 4
+        },
+        {
+            "document": "South of France - Traditions and Culture.pdf",
+            "section_title": "Christmas Traditions",
+            "importance_rank": 69,
+            "page_number": 4
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Beach Bag:",
+            "importance_rank": 70,
+            "page_number": 7
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Check the Weather:",
+            "importance_rank": 71,
+            "page_number": 8
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Cannes",
+            "importance_rank": 72,
+            "page_number": 8
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Verdon Gorge",
+            "importance_rank": 73,
+            "page_number": 4
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Pack Dual-Purpose Items:",
+            "importance_rank": 74,
+            "page_number": 8
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Ziplock Bags:",
+            "importance_rank": 75,
+            "page_number": 2
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Nice: The Jewel of the French Riviera",
+            "importance_rank": 76,
+            "page_number": 5
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Toulon",
+            "importance_rank": 77,
+            "page_number": 2
+        },
+        {
+            "document": "South of France - Restaurants and Hotels.pdf",
+            "section_title": "Family-Friendly Restaurants",
+            "importance_rank": 78,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - Restaurants and Hotels.pdf",
+            "section_title": "Luxurious Hotels",
+            "importance_rank": 79,
+            "page_number": 12
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Key Attractions",
+            "importance_rank": 80,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Key Attractions",
+            "importance_rank": 81,
+            "page_number": 5
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Key Attractions",
+            "importance_rank": 82,
+            "page_number": 7
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Saint-Tropez",
+            "importance_rank": 83,
+            "page_number": 2
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Cannes",
+            "importance_rank": 84,
+            "page_number": 6
+        },
+        {
+            "document": "South of France - Restaurants and Hotels.pdf",
+            "section_title": "Upscale Hotels",
+            "importance_rank": 85,
+            "page_number": 11
+        },
+        {
+            "document": "South of France - History.pdf",
+            "section_title": "Château Comtal",
+            "importance_rank": 86,
+            "page_number": 6
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Multi-Purpose Shoes:",
+            "importance_rank": 87,
+            "page_number": 2
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Blanket and Pillow:",
+            "importance_rank": 88,
+            "page_number": 6
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Aix-en-Provence: A City of Art and Culture",
+            "importance_rank": 89,
+            "page_number": 8
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Family-Friendly Activities",
+            "importance_rank": 90,
+            "page_number": 9
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Spring (March to May)",
+            "importance_rank": 91,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Water Activities",
+            "importance_rank": 92,
+            "page_number": 4
+        },
+        {
+            "document": "South of France - History.pdf",
+            "section_title": "Aix-en-Provence: A City of Art and Culture",
+            "importance_rank": 93,
+            "page_number": 9
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Key Attractions",
+            "importance_rank": 94,
+            "page_number": 8
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Cannes",
+            "importance_rank": 95,
+            "page_number": 7
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Carcassonne",
+            "importance_rank": 96,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Marseille",
+            "importance_rank": 97,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Stroller:",
+            "importance_rank": 98,
+            "page_number": 6
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Outdoor Activities",
+            "importance_rank": 99,
+            "page_number": 4
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Cultural Fusion",
+            "importance_rank": 100,
+            "page_number": 11
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Layering:",
+            "importance_rank": 101,
+            "page_number": 6
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Camera:",
+            "importance_rank": 102,
+            "page_number": 4
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Comfortable Clothing:",
+            "importance_rank": 103,
+            "page_number": 7
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Menton",
+            "importance_rank": 104,
+            "page_number": 2
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Introduction",
+            "importance_rank": 105,
+            "page_number": 1
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Summer (June to August)",
+            "importance_rank": 106,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Luberon",
+            "importance_rank": 107,
+            "page_number": 7
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Best Time to Visit",
+            "importance_rank": 108,
+            "page_number": 2
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Arles",
+            "importance_rank": 109,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Artistic Influence",
+            "importance_rank": 110,
+            "page_number": 12
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Pyrenees National Park",
+            "importance_rank": 111,
+            "page_number": 4
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Accessories:",
+            "importance_rank": 112,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - Traditions and Culture.pdf",
+            "section_title": "Pilgrimages",
+            "importance_rank": 113,
+            "page_number": 4
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Provence",
+            "importance_rank": 114,
+            "page_number": 5
+        },
+        {
+            "document": "South of France - History.pdf",
+            "section_title": "Nice: The Jewel of the French Riviera",
+            "importance_rank": 115,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - Cuisine.pdf",
+            "section_title": "Culinary Experiences",
+            "importance_rank": 116,
+            "page_number": 6
+        },
+        {
+            "document": "South of France - History.pdf",
+            "section_title": "Introduction",
+            "importance_rank": 117,
+            "page_number": 1
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Bars and Lounges",
+            "importance_rank": 118,
+            "page_number": 11
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Theme Parks and Attractions",
+            "importance_rank": 119,
+            "page_number": 9
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Opéra Grand Avignon",
+            "importance_rank": 120,
+            "page_number": 7
+        },
+        {
+            "document": "South of France - Restaurants and Hotels.pdf",
+            "section_title": "Introduction",
+            "importance_rank": 121,
+            "page_number": 1
+        },
+        {
+            "document": "South of France - Restaurants and Hotels.pdf",
+            "section_title": "Luxurious Restaurants",
+            "importance_rank": 122,
+            "page_number": 6
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "September.",
+            "importance_rank": 123,
+            "page_number": 6
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Dordogne River",
+            "importance_rank": 124,
+            "page_number": 4
+        },
+        {
+            "document": "South of France - History.pdf",
+            "section_title": "Conclusion",
+            "importance_rank": 125,
+            "page_number": 12
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Ardèche River",
+            "importance_rank": 126,
+            "page_number": 4
+        },
+        {
+            "document": "South of France - Restaurants and Hotels.pdf",
+            "section_title": "Conclusion",
+            "importance_rank": 127,
+            "page_number": 14
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Marseille",
+            "importance_rank": 128,
+            "page_number": 2
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Casual Wear:",
+            "importance_rank": 129,
+            "page_number": 4
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Swimwear:",
+            "importance_rank": 130,
+            "page_number": 4
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Diapers and Wipes:",
+            "importance_rank": 131,
+            "page_number": 6
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Luberon Regional Park",
+            "importance_rank": 132,
+            "page_number": 4
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Provence",
+            "importance_rank": 133,
+            "page_number": 5
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Cultural Highlights",
+            "importance_rank": 134,
+            "page_number": 8
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Relaxation and Wellness",
+            "importance_rank": 135,
+            "page_number": 7
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Notebook:",
+            "importance_rank": 136,
+            "page_number": 8
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Gorges du Verdon",
+            "importance_rank": 137,
+            "page_number": 4
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Additional Tips:",
+            "importance_rank": 138,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Coastal Adventures",
+            "importance_rank": 139,
+            "page_number": 2
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Wine Tasting",
+            "importance_rank": 140,
+            "page_number": 5
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Antibes",
+            "importance_rank": 141,
+            "page_number": 2
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Menton",
+            "importance_rank": 142,
+            "page_number": 6
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Marc Chagall National Museum",
+            "importance_rank": 143,
+            "page_number": 5
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Medieval Life",
+            "importance_rank": 144,
+            "page_number": 13
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Corsica",
+            "importance_rank": 145,
+            "page_number": 7
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Saint-Rémy-de-Provence",
+            "importance_rank": 146,
+            "page_number": 8
+        },
+        {
+            "document": "South of France - History.pdf",
+            "section_title": "Avignon Festival",
+            "importance_rank": 147,
+            "page_number": 4
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Key Attractions",
+            "importance_rank": 148,
+            "page_number": 12
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Emergency Contact List:",
+            "importance_rank": 149,
+            "page_number": 2
+        },
+        {
+            "document": "South of France - History.pdf",
+            "section_title": "Montpellier: A University City with Medieval Charm",
+            "importance_rank": 150,
+            "page_number": 10
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Saint-Tropez",
+            "importance_rank": 151,
+            "page_number": 7
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Layering:",
+            "importance_rank": 152,
+            "page_number": 2
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Côtes du Rhône",
+            "importance_rank": 153,
+            "page_number": 5
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Parc Phoenix",
+            "importance_rank": 154,
+            "page_number": 5
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Marseille to Cassis",
+            "importance_rank": 155,
+            "page_number": 2
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Arts Scene",
+            "importance_rank": 156,
+            "page_number": 7
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Port Grimaud",
+            "importance_rank": 157,
+            "page_number": 2
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Cévennes National Park",
+            "importance_rank": 158,
+            "page_number": 4
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Towels:",
+            "importance_rank": 159,
+            "page_number": 7
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Additional Tips:",
+            "importance_rank": 160,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Roll Your Clothes:",
+            "importance_rank": 161,
+            "page_number": 8
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Aix-en-Provence",
+            "importance_rank": 162,
+            "page_number": 8
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Cultural Highlights",
+            "importance_rank": 163,
+            "page_number": 12
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Place de l'Horloge",
+            "importance_rank": 164,
+            "page_number": 7
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Evian-les-Bains",
+            "importance_rank": 165,
+            "page_number": 7
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Autumn (September to November)",
+            "importance_rank": 166,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Lake Sainte-Croix",
+            "importance_rank": 167,
+            "page_number": 4
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Saint-Raphaël",
+            "importance_rank": 168,
+            "page_number": 7
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Châteauneuf-du-Pape",
+            "importance_rank": 169,
+            "page_number": 5
+        },
+        {
+            "document": "South of France - History.pdf",
+            "section_title": "Place de l'Horloge",
+            "importance_rank": 170,
+            "page_number": 4
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Clothing:",
+            "importance_rank": 171,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - Restaurants and Hotels.pdf",
+            "section_title": "Upscale Restaurants",
+            "importance_rank": 172,
+            "page_number": 4
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Aix-en-Provence",
+            "importance_rank": 173,
+            "page_number": 7
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Versatile Clothing:",
+            "importance_rank": 174,
+            "page_number": 2
+        },
+        {
+            "document": "South of France - Cuisine.pdf",
+            "section_title": "Must-Visit Restaurants",
+            "importance_rank": 175,
+            "page_number": 4
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Grasse",
+            "importance_rank": 176,
+            "page_number": 6
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Accessories:",
+            "importance_rank": 177,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Biarritz",
+            "importance_rank": 178,
+            "page_number": 7
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Marseille",
+            "importance_rank": 179,
+            "page_number": 5
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Additional Items:",
+            "importance_rank": 180,
+            "page_number": 6
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Accessories:",
+            "importance_rank": 181,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - Restaurants and Hotels.pdf",
+            "section_title": "Budget-Friendly Restaurants",
+            "importance_rank": 182,
+            "page_number": 2
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Sarlat",
+            "importance_rank": 183,
+            "page_number": 5
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Yoga and Meditation Retreats",
+            "importance_rank": 184,
+            "page_number": 7
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Avignon",
+            "importance_rank": 185,
+            "page_number": 6
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Croisette.",
+            "importance_rank": 186,
+            "page_number": 2
+        },
+        {
+            "document": "South of France - History.pdf",
+            "section_title": "Garonne River.",
+            "importance_rank": 187,
+            "page_number": 7
+        },
+        {
+            "document": "South of France - History.pdf",
+            "section_title": "Arles: A Roman Treasure",
+            "importance_rank": 188,
+            "page_number": 8
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Swimwear:",
+            "importance_rank": 189,
+            "page_number": 6
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Car Seat:",
+            "importance_rank": 190,
+            "page_number": 6
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Avignon: The City of Popes",
+            "importance_rank": 191,
+            "page_number": 7
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "MuCEM (Museum of European and Mediterranean Civilizations)",
+            "importance_rank": 192,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Copies of Important Documents:",
+            "importance_rank": 193,
+            "page_number": 2
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Marseille",
+            "importance_rank": 194,
+            "page_number": 6
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Perpignan: A Blend of French and Catalan Cultures",
+            "importance_rank": 195,
+            "page_number": 11
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Clothing:",
+            "importance_rank": 196,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - Traditions and Culture.pdf",
+            "section_title": "Lavender Products",
+            "importance_rank": 197,
+            "page_number": 4
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Mont Ventoux",
+            "importance_rank": 198,
+            "page_number": 4
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Ubaye River",
+            "importance_rank": 199,
+            "page_number": 4
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Historical Sites",
+            "importance_rank": 200,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Water Bottle:",
+            "importance_rank": 201,
+            "page_number": 8
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Accessories:",
+            "importance_rank": 202,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Toulouse",
+            "importance_rank": 203,
+            "page_number": 5
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Boutique Shopping",
+            "importance_rank": 204,
+            "page_number": 8
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Roll Your Clothes:",
+            "importance_rank": 205,
+            "page_number": 2
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Aix-en-Provence",
+            "importance_rank": 206,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Nîmes",
+            "importance_rank": 207,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Essentials",
+            "importance_rank": 208,
+            "page_number": 6
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Active Wear:",
+            "importance_rank": 209,
+            "page_number": 4
+        },
+        {
+            "document": "South of France - History.pdf",
+            "section_title": "Le Panier",
+            "importance_rank": 210,
+            "page_number": 2
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Saint-Paul-de-Vence",
+            "importance_rank": 211,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Key Attractions",
+            "importance_rank": 212,
+            "page_number": 10
+        },
+        {
+            "document": "South of France - Traditions and Culture.pdf",
+            "section_title": "Carnival of Nice",
+            "importance_rank": 213,
+            "page_number": 2
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Camargue",
+            "importance_rank": 214,
+            "page_number": 4
+        },
+        {
+            "document": "South of France - History.pdf",
+            "section_title": "Carnival of Nice",
+            "importance_rank": 215,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Avignon",
+            "importance_rank": 216,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Avignon",
+            "importance_rank": 217,
+            "page_number": 8
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Festivals and Events",
+            "importance_rank": 218,
+            "page_number": 6
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Le Panier",
+            "importance_rank": 219,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Nightlife and Entertainment",
+            "importance_rank": 220,
+            "page_number": 11
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Languedoc",
+            "importance_rank": 221,
+            "page_number": 5
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Toiletries",
+            "importance_rank": 222,
+            "page_number": 4
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Toiletries",
+            "importance_rank": 223,
+            "page_number": 6
+        },
+        {
+            "document": "South of France - History.pdf",
+            "section_title": "Avignon: The City of Popes",
+            "importance_rank": 224,
+            "page_number": 4
+        },
+        {
+            "document": "South of France - History.pdf",
+            "section_title": "Maison Carrée",
+            "importance_rank": 225,
+            "page_number": 5
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Nightclubs",
+            "importance_rank": 226,
+            "page_number": 11
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Marseille: The Oldest City in France",
+            "importance_rank": 227,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Cerbère-Banyuls",
+            "importance_rank": 228,
+            "page_number": 2
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Aigues-Mortes",
+            "importance_rank": 229,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - History.pdf",
+            "section_title": "Rocher des Doms",
+            "importance_rank": 230,
+            "page_number": 4
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Îles d'Hyères",
+            "importance_rank": 231,
+            "page_number": 2
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Cultural Highlights",
+            "importance_rank": 232,
+            "page_number": 13
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Camargue",
+            "importance_rank": 233,
+            "page_number": 7
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Conclusion",
+            "importance_rank": 234,
+            "page_number": 14
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Cultural Highlights",
+            "importance_rank": 235,
+            "page_number": 5
+        },
+        {
+            "document": "South of France - History.pdf",
+            "section_title": "Château d'If",
+            "importance_rank": 236,
+            "page_number": 2
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Additional Items:",
+            "importance_rank": 237,
+            "page_number": 4
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Beach Toys:",
+            "importance_rank": 238,
+            "page_number": 7
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Additional Tips:",
+            "importance_rank": 239,
+            "page_number": 4
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Clothing:",
+            "importance_rank": 240,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Sunscreen:",
+            "importance_rank": 241,
+            "page_number": 6
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Toulouse: The Pink City",
+            "importance_rank": 242,
+            "page_number": 9
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Toys and Entertainment:",
+            "importance_rank": 243,
+            "page_number": 6
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Comfortable Wear:",
+            "importance_rank": 244,
+            "page_number": 6
+        },
+        {
+            "document": "South of France - History.pdf",
+            "section_title": "Tour Magne",
+            "importance_rank": 245,
+            "page_number": 5
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Water Bottle:",
+            "importance_rank": 246,
+            "page_number": 7
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Bandol",
+            "importance_rank": 247,
+            "page_number": 5
+        },
+        {
+            "document": "South of France - History.pdf",
+            "section_title": "Arena of Nîmes",
+            "importance_rank": 248,
+            "page_number": 5
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Cultural Highlights",
+            "importance_rank": 249,
+            "page_number": 11
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Calanques National Park.",
+            "importance_rank": 250,
+            "page_number": 2
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Accessories:",
+            "importance_rank": 251,
+            "page_number": 6
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Winter (December to February)",
+            "importance_rank": 252,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - History.pdf",
+            "section_title": "Jardins de la Fontaine",
+            "importance_rank": 253,
+            "page_number": 5
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Art and Museums",
+            "importance_rank": 254,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Gaillac",
+            "importance_rank": 255,
+            "page_number": 5
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Orange",
+            "importance_rank": 256,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Cultural Highlights",
+            "importance_rank": 257,
+            "page_number": 7
+        },
+        {
+            "document": "South of France - Traditions and Culture.pdf",
+            "section_title": "Fête de la Musique",
+            "importance_rank": 258,
+            "page_number": 2
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "La Ciotat",
+            "importance_rank": 259,
+            "page_number": 2
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Arles: A Roman Treasure",
+            "importance_rank": 260,
+            "page_number": 12
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Mercantour National Park",
+            "importance_rank": 261,
+            "page_number": 4
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Cultural Highlights",
+            "importance_rank": 262,
+            "page_number": 10
+        },
+        {
+            "document": "South of France - History.pdf",
+            "section_title": "Marseille: The Oldest City in France",
+            "importance_rank": 263,
+            "page_number": 2
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Arles",
+            "importance_rank": 264,
+            "page_number": 6
+        },
+        {
+            "document": "South of France - History.pdf",
+            "section_title": "Cimiez",
+            "importance_rank": 265,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - History.pdf",
+            "section_title": "Nîmes: The Rome of France",
+            "importance_rank": 266,
+            "page_number": 5
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "First Aid Kit:",
+            "importance_rank": 267,
+            "page_number": 7
+        },
+        {
+            "document": "South of France - History.pdf",
+            "section_title": "Palais des Papes",
+            "importance_rank": 268,
+            "page_number": 4
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Palais des Papes",
+            "importance_rank": 269,
+            "page_number": 7
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Accessories:",
+            "importance_rank": 270,
+            "page_number": 4
+        },
+        {
+            "document": "South of France - Traditions and Culture.pdf",
+            "section_title": "Wine and Vineyards",
+            "importance_rank": 271,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Antibes",
+            "importance_rank": 272,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - History.pdf",
+            "section_title": "Russian Orthodox Cathedral",
+            "importance_rank": 273,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Basic Toiletries:",
+            "importance_rank": 274,
+            "page_number": 6
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Conclusion",
+            "importance_rank": 275,
+            "page_number": 13
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Carcassonne: A Medieval Fortress",
+            "importance_rank": 276,
+            "page_number": 13
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Cultural Experiences",
+            "importance_rank": 277,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Skincare:",
+            "importance_rank": 278,
+            "page_number": 4
+        },
+        {
+            "document": "South of France - Traditions and Culture.pdf",
+            "section_title": "Transhumance Festivals",
+            "importance_rank": 279,
+            "page_number": 2
+        },
+        {
+            "document": "South of France - History.pdf",
+            "section_title": "Fort Saint-Jean",
+            "importance_rank": 280,
+            "page_number": 2
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "First Aid Kit:",
+            "importance_rank": 281,
+            "page_number": 2
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Cultural Highlights",
+            "importance_rank": 282,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Vichy",
+            "importance_rank": 283,
+            "page_number": 7
+        },
+        {
+            "document": "South of France - Cuisine.pdf",
+            "section_title": "Introduction",
+            "importance_rank": 284,
+            "page_number": 1
+        },
+        {
+            "document": "South of France - History.pdf",
+            "section_title": "Pont Saint-Bénézet (Pont d'Avignon)",
+            "importance_rank": 285,
+            "page_number": 4
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Pont Saint-Bénézet (Pont d'Avignon)",
+            "importance_rank": 286,
+            "page_number": 7
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Street Art in Cours Julien",
+            "importance_rank": 287,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Arles",
+            "importance_rank": 288,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Introduction",
+            "importance_rank": 289,
+            "page_number": 1
+        },
+        {
+            "document": "South of France - Traditions and Culture.pdf",
+            "section_title": "Literature and Poetry",
+            "importance_rank": 290,
+            "page_number": 2
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Toulouse",
+            "importance_rank": 291,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Basic Toiletries:",
+            "importance_rank": 292,
+            "page_number": 4
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Water Sports",
+            "importance_rank": 293,
+            "page_number": 2
+        },
+        {
+            "document": "South of France - History.pdf",
+            "section_title": "Carcassonne: A Medieval Fortress",
+            "importance_rank": 294,
+            "page_number": 6
+        },
+        {
+            "document": "South of France - History.pdf",
+            "section_title": "Pont Vieux",
+            "importance_rank": 295,
+            "page_number": 6
+        },
+        {
+            "document": "South of France - Cuisine.pdf",
+            "section_title": "Wine Regions and Types of Wines",
+            "importance_rank": 296,
+            "page_number": 5
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Sarlat",
+            "importance_rank": 297,
+            "page_number": 8
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Additional Tips:",
+            "importance_rank": 298,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Safety and Comfort",
+            "importance_rank": 299,
+            "page_number": 6
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Key Attractions",
+            "importance_rank": 300,
+            "page_number": 9
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Clothing:",
+            "importance_rank": 301,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Matisse Museum",
+            "importance_rank": 302,
+            "page_number": 5
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Gadgets and Accessories",
+            "importance_rank": 303,
+            "page_number": 4
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Overview of the Region",
+            "importance_rank": 304,
+            "page_number": 2
+        },
+        {
+            "document": "South of France - Traditions and Culture.pdf",
+            "section_title": "Introduction",
+            "importance_rank": 305,
+            "page_number": 1
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Lake Serre-Ponçon",
+            "importance_rank": 306,
+            "page_number": 4
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Hidden Gems",
+            "importance_rank": 307,
+            "page_number": 5
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Clothing",
+            "importance_rank": 308,
+            "page_number": 4
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Clothing",
+            "importance_rank": 309,
+            "page_number": 6
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Footwear:",
+            "importance_rank": 310,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Snorkeling Gear:",
+            "importance_rank": 311,
+            "page_number": 7
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Fish Market at the Old Port",
+            "importance_rank": 312,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - Traditions and Culture.pdf",
+            "section_title": "Pétanque",
+            "importance_rank": 313,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Key Attractions",
+            "importance_rank": 314,
+            "page_number": 11
+        },
+        {
+            "document": "South of France - Traditions and Culture.pdf",
+            "section_title": "Jazz Manouche",
+            "importance_rank": 315,
+            "page_number": 5
+        },
+        {
+            "document": "South of France - History.pdf",
+            "section_title": "Inquisition Tower",
+            "importance_rank": 316,
+            "page_number": 6
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Bordeaux",
+            "importance_rank": 317,
+            "page_number": 7
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Old Town (Vieux Nice)",
+            "importance_rank": 318,
+            "page_number": 5
+        },
+        {
+            "document": "South of France - History.pdf",
+            "section_title": "Old Town (Vieux Nice)",
+            "importance_rank": 319,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Key Attractions",
+            "importance_rank": 320,
+            "page_number": 13
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Footwear:",
+            "importance_rank": 321,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Cultural Highlights",
+            "importance_rank": 322,
+            "page_number": 9
+        },
+        {
+            "document": "South of France - Cuisine.pdf",
+            "section_title": "Conclusion",
+            "importance_rank": 323,
+            "page_number": 8
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Grasse",
+            "importance_rank": 324,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - Cuisine.pdf",
+            "section_title": "Mediterranean.",
+            "importance_rank": 325,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - History.pdf",
+            "section_title": "Perpignan: A Blend of French and Catalan Cultures",
+            "importance_rank": 326,
+            "page_number": 11
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Castle Hill (Colline du Château)",
+            "importance_rank": 327,
+            "page_number": 5
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Local Markets",
+            "importance_rank": 328,
+            "page_number": 8
+        },
+        {
+            "document": "South of France - History.pdf",
+            "section_title": "Temple of Diana",
+            "importance_rank": 329,
+            "page_number": 5
+        },
+        {
+            "document": "South of France - History.pdf",
+            "section_title": "Castle Hill (Colline du Château)",
+            "importance_rank": 330,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - Traditions and Culture.pdf",
+            "section_title": "Truﬄe Hunting",
+            "importance_rank": 331,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Footwear:",
+            "importance_rank": 332,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Footwear:",
+            "importance_rank": 333,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - History.pdf",
+            "section_title": "Basilica of Saints Nazarius and Celsus",
+            "importance_rank": 334,
+            "page_number": 6
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Basilica of Notre-Dame de la Garde",
+            "importance_rank": 335,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - History.pdf",
+            "section_title": "Basilica of Notre-Dame de la Garde",
+            "importance_rank": 336,
+            "page_number": 2
+        },
+        {
+            "document": "South of France - History.pdf",
+            "section_title": "Hoardings",
+            "importance_rank": 337,
+            "page_number": 6
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Russian Orthodox Cathedral",
+            "importance_rank": 338,
+            "page_number": 5
+        },
+        {
+            "document": "South of France - History.pdf",
+            "section_title": "Pont du Gard",
+            "importance_rank": 339,
+            "page_number": 5
+        },
+        {
+            "document": "South of France - Traditions and Culture.pdf",
+            "section_title": "Course Camarguaise",
+            "importance_rank": 340,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Culinary Delights",
+            "importance_rank": 341,
+            "page_number": 5
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Old Port (Vieux-Port)",
+            "importance_rank": 342,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - History.pdf",
+            "section_title": "Old Port (Vieux-Port)",
+            "importance_rank": 343,
+            "page_number": 2
+        },
+        {
+            "document": "South of France - Traditions and Culture.pdf",
+            "section_title": "Conclusion",
+            "importance_rank": 344,
+            "page_number": 5
+        },
+        {
+            "document": "South of France - Traditions and Culture.pdf",
+            "section_title": "Provençal Language",
+            "importance_rank": 345,
+            "page_number": 2
+        },
+        {
+            "document": "South of France - Cuisine.pdf",
+            "section_title": "Famous Dishes",
+            "importance_rank": 346,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - History.pdf",
+            "section_title": "Cité de Carcassonne",
+            "importance_rank": 347,
+            "page_number": 6
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "section_title": "Shopping and Markets",
+            "importance_rank": 348,
+            "page_number": 8
+        },
+        {
+            "document": "South of France - Cuisine.pdf",
+            "section_title": "Types of Food",
+            "importance_rank": 349,
+            "page_number": 2
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "section_title": "Insect Repellent:",
+            "importance_rank": 350,
+            "page_number": 7
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "section_title": "Avignon Cathedral",
+            "importance_rank": 351,
+            "page_number": 7
+        },
+        {
+            "document": "South of France - History.pdf",
+            "section_title": "Avignon Cathedral",
+            "importance_rank": 352,
+            "page_number": 4
+        },
+        {
+            "document": "South of France - Traditions and Culture.pdf",
+            "section_title": "Provençal Cuisine",
+            "importance_rank": 353,
+            "page_number": 3
+        },
+        {
+            "document": "South of France - History.pdf",
+            "section_title": "Toulouse: The Pink City",
+            "importance_rank": 354,
+            "page_number": 7
+        },
+        {
+            "document": "South of France - History.pdf",
+            "section_title": "La Marseillaise",
+            "importance_rank": 355,
+            "page_number": 2
+        },
+        {
+            "document": "South of France - Traditions and Culture.pdf",
+            "section_title": "Pottery and Ceramics",
+            "importance_rank": 356,
+            "page_number": 4
+        },
+        {
+            "document": "South of France - Traditions and Culture.pdf",
+            "section_title": "Provençal Folk Music",
+            "importance_rank": 357,
+            "page_number": 5
+        }
+    ],
+    "subsection_analysis": [
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "refined_text": "Bring a small day bag for daily excursions. •.",
+            "page_number": 8
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "refined_text": "Bring a variety of snacks for travel and outings. •.",
+            "page_number": 6
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "refined_text": "Plan your wine tour route in advance and consider hiring a driver or joining a guided tour to avoid drinking and driving.",
+            "page_number": 8
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "refined_text": "By following this comprehensive guide and incorporating the tips and tricks provided, you'll be well-prepared for a comfortable and enjoyable trip. Packing for a trip to the South of France involves considering the season, planned activities, and the needs of both adults and children. Remember to pack light, versatile clothing, and essential items to make the most of your travel experience. Bon voyage!",
+            "page_number": 9
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "refined_text": "Plan your wine tour route in advance and consider hiring a driver or joining a guided tour to avoid drinking and driving.",
+            "page_number": 8
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "refined_text": "Leave extra space or bring a foldable bag for souvenirs. •.",
+            "page_number": 8
         }
     ]
 }

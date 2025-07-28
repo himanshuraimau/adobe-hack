@@ -1,0 +1,15 @@
+# PDF Analysis System Dependencies
+
+# Core PDF processing
+PyMuPDF>=1.23.0
+
+# Machine learning and embeddings
+sentence-transformers>=2.2.0
+scikit-learn>=1.3.0
+numpy>=1.24.0
+
+# System monitoring (optional but recommended)
+psutil>=5.9.0
+
+# Standard library dependencies (usually included with Python)
+# json, os, logging, datetime, pathlib, typing, dataclasses, re, time, traceback, sys, argparse

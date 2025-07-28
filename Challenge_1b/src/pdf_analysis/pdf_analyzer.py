@@ -2,6 +2,7 @@
 
 import fitz  # PyMuPDF
 import re
+import logging
 from typing import List, Dict, Any, Tuple
 from dataclasses import dataclass
 
@@ -31,31 +32,93 @@ class PDFAnalyzer:
     
     def __init__(self):
         self.font_size_threshold_multiplier = 1.2
+        self.logger = logging.getLogger(__name__)
         
     def extract_text_blocks(self, pdf_path: str) -> List[TextBlock]:
         """Extract text blocks with layout information using PyMuPDF."""
-        doc = fitz.open(pdf_path)
-        all_blocks = []
+        if not pdf_path:
+            raise ValueError("PDF path cannot be empty")
         
-        for page_num in range(doc.page_count):
-            page = doc.load_page(page_num)
-            blocks = page.get_text("dict")["blocks"]
+        doc = None
+        try:
+            # Attempt to open the PDF
+            doc = fitz.open(pdf_path)
             
-            for block in blocks:
-                if block["type"] == 0:  # text block
-                    for line in block["lines"]:
-                        for span in line["spans"]:
-                            if span["text"].strip():  # Skip empty text
-                                all_blocks.append(TextBlock(
-                                    text=span["text"].strip(),
-                                    font_size=span["size"],
-                                    font_name=span["font"],
-                                    bbox=span["bbox"],
-                                    page=page_num + 1
-                                ))
-        
-        doc.close()
-        return all_blocks
+            if doc.is_encrypted:
+                self.logger.warning(f"PDF is encrypted: {pdf_path}")
+                # Try to authenticate with empty password
+                if not doc.authenticate(""):
+                    raise RuntimeError(f"Cannot decrypt PDF: {pdf_path}")
+            
+            if doc.page_count == 0:
+                self.logger.warning(f"PDF has no pages: {pdf_path}")
+                return []
+            
+            all_blocks = []
+            failed_pages = 0
+            
+            for page_num in range(doc.page_count):
+                try:
+                    page = doc.load_page(page_num)
+                    
+                    # Extract text with error handling
+                    try:
+                        text_dict = page.get_text("dict")
+                        blocks = text_dict.get("blocks", [])
+                    except Exception as e:
+                        self.logger.warning(f"Failed to extract text from page {page_num + 1} in {pdf_path}: {e}")
+                        failed_pages += 1
+                        continue
+                    
+                    # Process text blocks
+                    for block in blocks:
+                        if block.get("type") == 0:  # text block
+                            for line in block.get("lines", []):
+                                for span in line.get("spans", []):
+                                    text = span.get("text", "").strip()
+                                    if text:  # Skip empty text
+                                        try:
+                                            all_blocks.append(TextBlock(
+                                                text=text,
+                                                font_size=span.get("size", 12.0),
+                                                font_name=span.get("font", "unknown"),
+                                                bbox=span.get("bbox", (0, 0, 0, 0)),
+                                                page=page_num + 1
+                                            ))
+                                        except Exception as e:
+                                            self.logger.debug(f"Error creating TextBlock from span: {e}")
+                                            continue
+                
+                except Exception as e:
+                    self.logger.warning(f"Error processing page {page_num + 1} in {pdf_path}: {e}")
+                    failed_pages += 1
+                    continue
+            
+            if failed_pages > 0:
+                self.logger.warning(f"Failed to process {failed_pages}/{doc.page_count} pages in {pdf_path}")
+            
+            if not all_blocks:
+                self.logger.warning(f"No text blocks extracted from {pdf_path}")
+            else:
+                self.logger.debug(f"Extracted {len(all_blocks)} text blocks from {pdf_path}")
+            
+            return all_blocks
+            
+        except FileNotFoundError:
+            raise FileNotFoundError(f"PDF file not found: {pdf_path}")
+        except PermissionError:
+            raise PermissionError(f"Permission denied accessing PDF: {pdf_path}")
+        except Exception as e:
+            if "cannot open" in str(e).lower():
+                raise RuntimeError(f"Cannot open PDF file (possibly corrupted): {pdf_path}")
+            else:
+                raise RuntimeError(f"Error extracting text from PDF {pdf_path}: {e}")
+        finally:
+            if doc:
+                try:
+                    doc.close()
+                except:
+                    pass
     
     def _calculate_median_font_size(self, blocks: List[TextBlock]) -> float:
         """Calculate median font size to identify headers."""
