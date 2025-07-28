@@ -10,17 +10,17 @@ import fitz  # PyMuPDF
 import logging
 from pathlib import Path
 try:
-    from .models import TextBlock
-    from .config import config
+    from ..models.models import TextBlock
+    from ..config.config import config
     from .error_handler import (
         PDFProcessingError, global_error_handler, timeout_manager,
         safe_operation, error_handler_decorator
     )
 except ImportError:
     # Handle relative imports when running as script
-    from models import TextBlock
-    from config import config
-    from error_handler import (
+    from src.pdf_extractor.models.models import TextBlock
+    from src.pdf_extractor.config.config import config
+    from src.pdf_extractor.core.error_handler import (
         PDFProcessingError, global_error_handler, timeout_manager,
         safe_operation, error_handler_decorator
     )

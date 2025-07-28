@@ -12,24 +12,24 @@ from pathlib import Path
 from typing import Optional
 
 try:
-    from .config import config
-    from .pdf_parser import PDFParser
-    from .preprocessor import TextPreprocessor
-    from .feature_extractor import FeatureExtractor
-    from .classifier import HeadingClassifier
-    from .structure_analyzer import StructureAnalyzer
-    from .json_builder import JSONBuilder
-    from .performance_profiler import get_global_profiler, start_global_monitoring, stop_global_monitoring
+    from src.pdf_extractor.config.config import config
+    from src.pdf_extractor.core.pdf_parser import PDFParser
+    from src.pdf_extractor.core.preprocessor import TextPreprocessor
+    from src.pdf_extractor.core.feature_extractor import FeatureExtractor
+    from src.pdf_extractor.core.classifier import HeadingClassifier
+    from src.pdf_extractor.core.structure_analyzer import StructureAnalyzer
+    from src.pdf_extractor.core.json_builder import JSONBuilder
+    from scripts.performance_profiler import get_global_profiler, start_global_monitoring, stop_global_monitoring
 except ImportError:
     # Handle when running as script
-    from config import config
-    from pdf_parser import PDFParser
-    from preprocessor import TextPreprocessor
-    from feature_extractor import FeatureExtractor
-    from classifier import HeadingClassifier
-    from structure_analyzer import StructureAnalyzer
-    from json_builder import JSONBuilder
-    from performance_profiler import get_global_profiler, start_global_monitoring, stop_global_monitoring
+    from src.pdf_extractor.config.config import config
+    from src.pdf_extractor.core.pdf_parser import PDFParser
+    from src.pdf_extractor.core.preprocessor import TextPreprocessor
+    from src.pdf_extractor.core.feature_extractor import FeatureExtractor
+    from src.pdf_extractor.core.classifier import HeadingClassifier
+    from src.pdf_extractor.core.structure_analyzer import StructureAnalyzer
+    from src.pdf_extractor.core.json_builder import JSONBuilder
+    from scripts.performance_profiler import get_global_profiler, start_global_monitoring, stop_global_monitoring
 
 
 def setup_logging():
@@ -229,9 +229,9 @@ def process_pdf(pdf_path: str, output_dir: str, timeout: int = None) -> Optional
                         except Exception as e:
                             logger.warning(f"Feature extraction failed for block, using defaults: {e}")
                             # Use default features as fallback
-                            from error_handler import global_error_handler
+                            from src.pdf_extractor.core.error_handler import global_error_handler
                             default_features = global_error_handler.handle_feature_extraction_error(e, block.text)
-                            from models import FeatureVector
+                            from src.pdf_extractor.models.models import FeatureVector
                             block.features = FeatureVector(**default_features)
                     
                     # Classify the batch
@@ -243,7 +243,7 @@ def process_pdf(pdf_path: str, output_dir: str, timeout: int = None) -> Optional
                             batch_results = classifier.model_adapter.predict_batch(texts_and_features)
                             
                             for block, (predicted_class, confidence) in zip(batch, batch_results):
-                                from models import ClassificationResult
+                                from src.pdf_extractor.models.models import ClassificationResult
                                 result = ClassificationResult(
                                     block=block,
                                     predicted_class=predicted_class,
@@ -261,7 +261,7 @@ def process_pdf(pdf_path: str, output_dir: str, timeout: int = None) -> Optional
                                 except Exception as classify_error:
                                     logger.warning(f"Individual classification failed for block: {classify_error}")
                                     # Create minimal result as ultimate fallback
-                                    from models import ClassificationResult
+                                    from src.pdf_extractor.models.models import ClassificationResult
                                     result = ClassificationResult(
                                         block=block,
                                         predicted_class="text",
@@ -278,7 +278,7 @@ def process_pdf(pdf_path: str, output_dir: str, timeout: int = None) -> Optional
                             except Exception as classify_error:
                                 logger.warning(f"Individual classification failed for block: {classify_error}")
                                 # Create minimal result as ultimate fallback
-                                from models import ClassificationResult
+                                from src.pdf_extractor.models.models import ClassificationResult
                                 result = ClassificationResult(
                                     block=block,
                                     predicted_class="text",
@@ -304,7 +304,7 @@ def process_pdf(pdf_path: str, output_dir: str, timeout: int = None) -> Optional
             except Exception as e:
                 logger.error(f"Structure analysis failed: {e}")
                 # Use error handler to create minimal structure
-                from error_handler import global_error_handler
+                from src.pdf_extractor.core.error_handler import global_error_handler
                 document_structure = global_error_handler.handle_structure_analysis_error(e, classification_results)
         
         logger.info(f"Found title: {document_structure.title}")
@@ -321,7 +321,7 @@ def process_pdf(pdf_path: str, output_dir: str, timeout: int = None) -> Optional
             except Exception as e:
                 logger.error(f"JSON generation failed: {e}")
                 # Use error handler to create fallback JSON
-                from error_handler import global_error_handler
+                from src.pdf_extractor.core.error_handler import global_error_handler
                 error_json = global_error_handler.handle_output_generation_error(e, document_structure)
                 
                 # Try to write the error JSON
@@ -384,9 +384,9 @@ def _generate_error_output(pdf_path: str, output_dir: str, error_message: str) -
     
     try:
         try:
-            from .json_builder import JSONBuilder
+            from src.pdf_extractor.core.json_builder import JSONBuilder
         except ImportError:
-            from json_builder import JSONBuilder
+            from src.pdf_extractor.core.json_builder import JSONBuilder
         
         json_builder = JSONBuilder()
         error_json = {
@@ -427,9 +427,9 @@ def _generate_timeout_output(pdf_path: str, output_dir: str) -> Optional[str]:
     
     try:
         try:
-            from .json_builder import JSONBuilder
+            from src.pdf_extractor.core.json_builder import JSONBuilder
         except ImportError:
-            from json_builder import JSONBuilder
+            from src.pdf_extractor.core.json_builder import JSONBuilder
         
         json_builder = JSONBuilder()
         timeout_json = {

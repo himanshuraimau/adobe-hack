@@ -12,12 +12,12 @@ import logging
 from collections import defaultdict
 
 try:
-    from .models import TextBlock, ProcessedBlock, FeatureVector
-    from .config import config
+    from ..models.models import TextBlock, ProcessedBlock, FeatureVector
+    from ..config.config import config
 except ImportError:
     # Handle relative imports when running as script
-    from models import TextBlock, ProcessedBlock, FeatureVector
-    from config import config
+    from src.pdf_extractor.models.models import TextBlock, ProcessedBlock, FeatureVector
+    from src.pdf_extractor.config.config import config
 
 
 logger = logging.getLogger(__name__)
